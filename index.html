@@ -296,9 +296,10 @@
     <!-- hero section -->                
 <section class="relative bg-gray-800 overflow-hidden">
   <div class="relative h-auto w-screen">
-    <div id="lazy_container" class="absolute inset-0 z-0">
-      <img id="placeholder_image" src="/assets/videos/thumbnail.webp" fetchpriority="high" loading="lazy">
-    </div>
+    <video autoplay muted loop preload="auto" poster="/assets/videos/thumbnail.webp" id="background-video" class="absolute top-0 left-0 w-full h-full object-cover">
+      <source src="/assets/videos/totalrugged-small.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </source></video>
     <div class="relative z-10">
       <div class="absolute inset-0 bg-gradient"></div>
       <div class="relative container mb-24 px-4 pt-24 md:pt-40 pb-8 mx-auto">
@@ -310,50 +311,13 @@
           </div>
         </div>
         <div class="flex justify-center mt-10">
-          <img src="assets/images/Sonstige%20Bilder/video_image.webp" alt="Image" class="inset-0 slide-in-right lg:w-2/3" loading="lazy">
+          <img src="/assets/images/Sonstige%20Bilder/video_image.webp" alt="Image" class="inset-0 slide-in-right lg:w-2/3" loading="lazy">
         </div>
       </div>
     </div>
   </div>
+  
 </section>
-<script>
-var img = document.getElementById("placeholder_image");
-var lazyContainer = document.getElementById("lazy_container");
-
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5 // Trigger when img is 50% visible
-};
-
-var observer = new IntersectionObserver(function (entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      // remove the img
-      lazyContainer.removeChild(img);
-      // create a video instead
-      const videoElement = document.createElement("video");
-      videoElement.src = "/assets/videos/totalrugged-small.mp4";
-      videoElement.alt = "Lazy-loaded Video";
-      videoElement.poster = "/assets/videos/thumbnail.webp";
-      videoElement.autoplay = true;
-      videoElement.loop = true;
-      videoElement.muted = true;
-      videoElement.preload = "none";
-      videoElement.className = "absolute inset-0 w-full object-cover video-responsive"; // CSS for positioning
-
-      // swap it in for the img
-      lazyContainer.appendChild(videoElement);
-      // load video
-      videoElement.load();
-      // disconnect observer
-      observer.unobserve(img);
-    }
-  });
-}, options);
-
-observer.observe(img);
-</script>
 
 
 <!-- section 1 -->
