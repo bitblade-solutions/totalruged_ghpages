@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/alpinejs.min.js"></script>
+
+  
+  
+  <title>Durabook R8</title>
+
+</head>
+<body>
+<div x-data="{ showBanner: !localStorage.getItem('cookieConsentAccepted') }" x-show="showBanner" class="fixed bottom-0 left-0 mb-4 ml-4 mr-4 w-64 z-50">
+    <div class="bg-gray-500 rounded-lg shadow-lg p-4">
+        <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center">
+                <img src="https://www.svgrepo.com/show/401340/cookie.svg" alt="Cookie" class="h-6 w-6 mr-2" loading="lazy">
+                <span class="text-white font-bold text-sm">Cookie Richtlinien</span>
+            </div>
+            <button x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'false');" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                <svg class="h-4 w-4" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <p class="text-gray-200 text-sm pb-6">
+            Wir verwenden Cookies und andere Tracking-Technologien, um Ihr Surferlebnis auf unserer Website zu verbessern, um Ihnen personalisierte Inhalte und gezielte Werbung zu zeigen, um unseren Website-Verkehr zu analysieren und um zu verstehen, woher unsere Besucher kommen. 
+        </p>
+        <div class="flex flex-row"></div>
+        <button id="cookie-notice-accept" x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'true'); loadAdditionalScripts();" href="#" class="mt-4 bg-blue-500 hover:bg-blue-600 rounded transition duration-200 text-white font-bold py-2 px-4">
+            Akzeptieren
+        </button>
+        
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        loadAdditionalScripts();
+    });
+
+    function loadAdditionalScripts() {
+        if (localStorage.getItem('cookieConsentAccepted')) {
+            
+            //matomo
+        
+
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            _paq.push(['enableHeartBeatTimer', 5]);
+            (function() {
+                var u="//analytics.bitblade.de/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '5']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+
+
+
+            
+
+        }
+    }
+</script>
+
+
+  
+<nav class="bg-black">
+  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-4 text-gray-200">
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-phone-alt"></i> +49 (0) 69 271 470 985</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0 md:ml-4">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-envelope"></i> kontakt@totalrugged.com</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:px-4 md:text-right">
+      <a href="/kontakt" class="block text-center px-8 py-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="flex justify-between items-center w-full p-4 ml-16 text-white">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-8" alt="Flowbite Logo" loading="lazy">
+    </a>
+  </div>
+
+  
+
+    
+    <!-- display items -->
+     <div class="w-full md:hidden mt-4 ml-4 justify-between items-center">
+<button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-left p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="mega-menu-full" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+            </svg>
+      </button>
+    </div>
+    <!-- items -->
+      <div id="mega-menu-full" class="items-center justify-start ml-8 font-medium hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="md:flex xs:flex-col md:flex-row  xs:p-4 md:p-0 mt-4 rounded-lg bg-black md:bg-transparent md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              <li>
+                <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Tablets<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                  <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent mb-4 md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Laptops<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Branchen<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <a href="/ueber_uns" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Über uns</a>
+            </li>
+           
+            
+          </ul>
+       
+      </div>
+  
+
+
+<!-- dropdown 1 -->
+<div id="mega-menu-full-dropdown1" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap justify-between">
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r8/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Image Durabook R8" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R8</div>
+        </a> 
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11/A-01.webp" alt="Image Durabook R11" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11l/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11L/A-01.webp" alt="Image Durabook R11L" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11L</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-u11i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Image Durabook U11I" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook U11I</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> 
+
+
+
+   <!-- dropdown 2 -->
+   <div id="mega-menu-full-dropdown2" class="hidden mt-1 shadow-sm bg-gray-600">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap justify-between">
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s15/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_S15/front.webp" alt="Image Durabook S15" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S15</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Image Durabook S14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S14I</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-z14i" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Image Durabook Z14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook Z14I</div>
+          </a>
+        </li>
+        <!-- Falls weitere Elemente hinzufügt werden sollen -->
+      </ul>
+    </div>
+  </div>
+  
+
+<!-- dropdown 3 -->
+<div id="mega-menu-full-dropdown3" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap">
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/werkstatt/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/workshop.webp" alt="Image Werkstatt" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Werkstatt</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/autohaus/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/car_dealer.webp" alt="Image Autohaus" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Autohaus</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/militaer/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/soldiers.webp" alt="Image Militär" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Militär</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/industrie" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/industry.webp" alt="Image Industrie" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Industrie</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/sicherheit/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/police.webp" alt="Image Sicherheit" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Öffentliche Sicherheit</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/transport/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/transport.webp" alt="Image Transport" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Transport</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/logistik/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/logistic.webp" alt="Image Logistik" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Logistik</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/bau/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/construction.webp" alt="Image Bau" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Bau</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/landwirtschaft/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/agrar.webp" alt="Image Landwirtschaft" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-6">Landwirtschaft</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/outdoor/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/outdoor.webp" alt="Image Outdoor" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Outdoor</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('[data-collapse-toggle]');
+      const dropdowns = document.querySelectorAll('.hidden.mt-1');
+  
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const targetDropdownId = this.getAttribute('data-collapse-toggle');
+          const targetDropdown = document.getElementById(targetDropdownId);
+  
+          dropdowns.forEach(dropdown => {
+            if (dropdown !== targetDropdown) {
+              dropdown.classList.add('hidden');
+            }
+          });
+  
+          targetDropdown.classList.toggle('hidden');
+        });
+      });
+    });
+  </script>
+  
+  <main>
+    
+
+
+<!-- HERO SECTION -->                
+<section class="pb-10 bg-gray-800">
+    <nav class="relative"></nav>
+    <div class="relative container lg:px-16 pt-12 md:pt-8 mx-auto">
+      <div class="flex flex-wrap items-center -mx-4 mb-20 2xl:mb-14">
+        <div class="w-full lg:w-1/2 px-8 mt-16">
+          <img class="w-full" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Placeholder" loading="lazy">
+        </div>
+        <div class="w-full lg:w-1/2 px-12 mb-16 lg:mb-0">
+          <span class="text-lg font-bold text-blue-400 ml-1"></span>
+          <h2 class="max-w-2xl mt-10 mb-8 text-5xl 2xl:text-8xl text-white font-bold font-heading">Durabook R8 Tablet</h2>
+          <p class="mb-12 lg:mb-16 2xl:mb-24 text-xl"></p>
+          <ul class="custom-bullet-list">
+          
+          
+            <li class="text-white font-thin custom-bullet">8 Zoll Full HD mit Touchscreen</li>
+          
+          
+            <li class="text-white font-thin custom-bullet">IP66 und MIL-STD-810H</li>
+          
+          
+            <li class="text-white font-thin custom-bullet">Intel® Core™ i5-1230U</li>
+          
+          
+            <li class="text-white font-thin custom-bullet">8 - 16 GB DDR4 RAM</li>
+          
+          
+            <li class="text-white font-thin custom-bullet">128 GB - 1 TB SSD</li>
+          
+          
+            <li class="text-white font-thin custom-bullet">8,5 Stunden Akkulaufzeit</li>
+          
+        </ul>
+          <div class="lg:flex">
+          <a class="inline-block lg:px-10 px-8 sm:px-4 lg:py-4 py-4 text-lg mr-2 mb-2 mt-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="/kontakt">Angebot anfragen</a>
+          <a class="inline-block lg:px-10 px-8 sm:px-12 lg:py-4 py-4 mr-2 mb-2 mt-12 text-lg border border-gray-300 hover:border-gray-200 rounded-full transition duration-200 font-bold text-white" href="/assets/Datasheets/DURABOOK_R8-DM_20240315.pdf" target="_blank">Datenblatt</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+       
+<!-- CONTENT -->
+<section class="py-20 bg-gray-800 overflow-hidden">
+  <div class="container mx-auto">
+    <!-- IMG 1 -->
+    <div class="flex flex-wrap -mx-4 mb-24">
+      <div class="relative w-full lg:w-1/2 px-4 lg:items-center lg:justify-center lg:mb-0">
+        <a href="#">
+          <img class="lg:absolute right-0 top-0  w-full h-auto lg:h-auto object-cover rounded-xl mt-16" src="/assets/images/T_R8/Feature-4_Rock-Dolid-Design.webp" alt="" loading="lazy">
+        </a>
+      </div>
+      <div class="w-full lg:w-1/2 px-8 lg:py-12">
+        <a href="#">
+          <h2 class="max-w-lg mt-4 mb-14 text-4xl lg:text-5xl font-bold font-heading text-white">Extrem robust</h2>
+        </a>
+        <div class="inline-flex items-center">
+          <div class="text-left">
+            <p class="text-gray-200 text-lg font-thin">Das 8-Zoll HD-Display des Durabook R8 ist sehr robust gegen äußere Einflüsse und eignet sich daher perfekt für unterwegs in schwierigen Bedingungen. Alle Kanten sind mit Gummi umrandet. Stürze aus bis zu 1,2 m stellen somit kein Problem für das Gerät dar. Das robuste Outdoor Tablet hat die MIL-STD-810H und IP66 Zertifizierung, was bedeutet, dass es staub- und wasserbeständig ist und in einem Temperaturbereich von -20°C bis 60°C mühelos seine Dienste verrichtet. Das Tablet besitzt einen integrierten Bildschirm mit 800 Nits Helligkeit, der auch bei direktem Sonnenschein gut zu bedienen ist. <br> <br>Auch wenn es um die Leistung geht, ist das Outdoor Tablet außergewöhnlich leistungsfähig und ist stets jeder Herausforderung gewachsen. Ein Intel® Core™ i5-1230U Prozessor mit zehn Cores und zwölf Threads sowie einer Taktrate von bis zu 4.4 GHz sorgt für eine schnelle Verarbeitung ohne Stocken oder Hängenbleiben. Mit dem optional erhältlichen Intel® Core™ i7-1250U Prozessor können sogar noch leistungsstärkere Anwendungen realisiert werden. Der Arbeitsspeicher beträgt 8 - 16 GB RAM und ist ausreichend groß dimensioniert für Windows®11 sowie alle Office-Anwendungen. Die verbaute NVMe PCIe SSD Festplatte mit 128 GB - 1TB bietet nicht nur eine kurze Startzeit, sondern auch viel Kapazität.</p>
+          </div>
+        </div>
+      </div> 
+    </div>
+    
+    <!-- IMG 2 -->
+    <div class="flex flex-wrap -mx-4 mt-32">
+      <div class="w-full lg:w-1/2 px-8 lg:py-12 -mt-16">
+        <a href="#">
+          <h2 class="max-w-lg mt-10 mb-14 text-4xl lg:text-5xl font-bold font-heading text-white">Extrem stark</h2>
+        </a>
+        <div class="inline-flex items-center">
+
+          <div class="text-left">
+            <p class="text-gray-200 text-lg font-thin">Das Durabook R8 hat verschiedene Möglichkeiten der Datenübertragung, so bleiben Sie stets in Verbindung. Mit Endgeräten und dem lokalen Netzwerken verbinden? Kein Problem mit unseren WLAN und Bluetooth Schnittstellen. Die eingebauten USB 3.2 Ports ermöglichen den Anschluss von verschiedensten Peripheriegeräten. GPS (optional) und LTE (optional) ermöglichen es Ihnen, sich direkt mit dem Mobilfunknetz zu verbinden und von dort Standort-<br>informationen abzurufen. <br><br>Das R8 ist das weltweit kompakteste, vollständig robuste  Outdoor Tablet mit einem Gewicht von nur 0,86 kg einschließlich Akku und einer Höhe von nur 20,5 mm, das jedoch bis zu 8,5 Stunden ununterbrochene Nutzung ermöglicht, wenn es nur mit dem Akku betrieben wird. Können Sie bei direkter Sonneneinstrahlung draußen den Bildschirm nicht sehen? Deshalb hat dieses robuste Tablet ein sonnenlichttaugliches Display mit 800 Nits auf dem Durabook R8. Mit dem optionalen Barcodeleser können Sie Produkte schneller scannen. Außerdem können Sie über eine optionale serielle RS232-Schnittstelle auch andere Geräte wie Maschinen anschließen, über die Sie Daten auslesen können. Zusätzliches gibt es Zubehör wie Autoadapter, Akkuladestationen für jeweils 2 oder 8 Akkus, Skizzenstift, Chipkarten- und RFID-Leser und Folien-<br>taschen. Ebenfalls erhältlich sind verschiedene Hand- und Schultergurte sowie Auto-Dockingstationen.</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative w-full lg:w-1/2 px-4 mb-8 lg:mb-0 items-center justify-center order-first lg:order-last">
+        <a href="#">
+          <img class="lg:absolute right-0 top-0  w-full h-auto lg:h-auto object-cover rounded-xl mt-16" src="/assets/images/T_R8/Feature-1_Performance-CPU.webp" alt="" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+     <!-- Section 2 -->   
+     <section class="py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+      <div class="container px-1 mx-auto">
+        <div class="max-w-xl mx-auto mb-24 text-center">
+          <h2 class="mt-2 mb-8 text-4xl lg:text-4xl text-white font-bold font-heading">Einfach zum passenden Gerät</h2>
+        </div>
+        <div class="relative px-8 mx-4 lg:pr-0 lg:pl-12 2xl:pl-24 mb-14 lg:mb-40 bg-gray-500 rounded-xl overflow-hidden">
+          <div class="w-full lg:w-1/3 pt-12 lg:py-12 pr-8">
+            <h3 class="mb-4 ml-6 text-xl font-bold text-white">Wie funktionierts?</h3>
+            <p class="text-xl p-4 ml-2 font-thin text-gray-200">Den Kauf von robusten mobilen Geräten gestalten wir für Sie so einfach wie möglich.</p>
+          </div>
+          <img class="p-4 lg:absolute top-0 right-0 bottom-0 h-full w-full lg:w-1/3 object-cover rounded-xl -ml-7 mb-6" src="/assets/images/Sonstige%20Bilder/customer-copy.webp" alt="" loading="lazy">
+        </div>
+  
+        <!-- Section 2 -->
+        <div class="relative flex flex-wrap justify-center mt-20">
+          <div class="w-full lg:w-1/3 px-10 mb-12">
+            <div class="relative flex">
+              <div class="mr-8 -mt-3">
+                <span class="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">1</span>
+              </div>
+              <div class="max-w-xs">
+                <h3 class="mb-6 text-lg font-bold font-heading text-white">Produkt aussuchen</h3>
+                <p class="text-lg font-thin text-gray-200">Werfen Sie einen Blick auf unser Produktportfolio und suchen Sie sich das am besten passende Gerät aus.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 px-10 mb-12">
+            <div class="flex">
+              <div class="mr-8 -mt-3">
+                <span class="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">2</span>
+              </div>
+              <div class="max-w-xs">
+                <h3 class="mb-6 text-lg font-bold font-heading text-white">Angebot Anfragen</h3>
+                <p class="text-lg font-thin text-gray-200">Fragen Sie ein unverbindliches Angebot an, welches wir Ihnen schnellstmöglich zusenden.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 px-10">
+            <div class="flex">
+              <div class="mr-8 -mt-3">
+                <span class="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">3</span>
+              </div>
+              <div class="max-w-xs">
+                <h3 class="mb-6 text-lg font-bold font-heading text-white">Beratung und Abschluss</h3>
+                <p class="text-lg font-thin text-gray-200">Wir beraten Sie ausgiebig zu Ihren Anforderungen und begleiten Sie beim Projektabschluss.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-14">
+          <a class="inline-block px-10 py-3 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white" href="#uebersicht">Jetzt Geräte entdecken</a>
+        </div>
+      </div>
+    </section>
+    
+  
+    <!-- PRODUCTS IMAGES -->
+    <section class="relative bg-gray-800 py-20 2xl:py-40 overflow-hidden">
+        <div class="relative max-w-4xl px-4 lg:px-0 mx-auto py-10">
+            <div class="max-w-xl mb-14 lg:mb-28">
+                <h2 class="mt-8 text-center text-5xl text-white font-bold font-heading">Durabook R8 Tablet</h2>
+            </div>
+            <div class="relative p-4" x-data="{ currentImage: 0, images: ['/assets/images/T_R8/BACK-01.webp', '/assets/images/T_R8/RIGHT-OPEN-01.webp', '/assets/images/T_R8/FRONT-1W11-01.webp'], alts: ['placeholder', 'placeholder', 'placeholder'] }">
+                <!-- Slides -->
+                <template x-for="(image, index) in images" :key="index">
+                    <div x-show="currentImage === index" class="relative max-w-4xl mx-auto">
+                        <img class="w-full mb-12 object-cover" :src="image" :alt="alts[index]">
+                    </div>
+                </template>
+
+                <!-- Prev/Next Arrows -->
+                <div class="flex flex-wrap -mx-5">
+                    <div class="w-auto mx-auto lg:w-1/5 px-5">
+                        <button class="inline-flex mr-2 items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full carousel-button" x-on:click="currentImage = currentImage === 0 ? images.length - 1 : currentImage - 1">
+                            <svg class="w-4 h-4" width="7" height="13" viewbox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.84708 12.1077C7.05097 12.3133 7.05097 12.6436 6.84708 12.8476C6.64319 13.0517 6.31377 13.0525 6.10988 12.8476L0.152917 6.8708C-0.0509739 6.66673 -0.0509738 6.33645 0.152917 6.13087L6.10988 0.154027C6.31377 -0.0500387 6.64319 -0.0500386 6.84708 0.154027C7.05098 0.358848 7.05098 0.689887 6.84708 0.893952L1.4143 6.50121L6.84708 12.1077Z" fill="white"></path>
+                            </svg>
+                        </button>
+                        <button class="inline-flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full carousel-button" x-on:click="currentImage = currentImage === images.length - 1 ? 0 : currentImage + 1">
+                            <svg class="w-4 h-4" width="7" height="13" viewbox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.152917 0.894235C-0.0509742 0.688658 -0.0509742 0.358375 0.152917 0.15431C0.356808 -0.0497557 0.686228 -0.0505119 0.89012 0.15431L6.84708 6.13116C7.05097 6.33522 7.05097 6.6655 6.84708 6.87108L0.890119 12.8479C0.686227 13.052 0.356807 13.052 0.152916 12.8479C-0.0509753 12.6431 -0.0509753 12.3121 0.152916 12.108L5.5857 6.50074L0.152917 0.894235Z" fill="white"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="absolute w-full -ml-4 flex  lg:items-center lg:justify-center px-4 mt-8">
+                    <template x-for="(image, index) in images" :key="index">
+                        <button class="flex-1 w-4 h-2 mx-2 mb-0 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-teal-600 hover:shadow-lg" :class="{ 
+                                'bg-blue-500': currentImage === index,
+                                'bg-white': currentImage !== index 
+                            }" x-on:click="currentImage = index"></button>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- FEATURES TABLE -->
+<section class="relative py-20 2xl:py-40 bg-gray-800">
+  <div class="container px-4 pb-20 mx-auto border-b border-gray-500">
+    <div class="mb-14 text-center">
+      <h2 class="mt-8 text-5xl font-bold font-heading text-white">Laptop Vergleich</h2>
+    </div>
+    <div class="pt-20 border-t border-gray-500 overflow-x-auto overflow-y-hidden">
+      <table class="table-auto w-full mb-10">
+        <thead>
+          <tr class="text-md md:text-lg text-white text-left font-bold">
+<th class="pb-6"></th>
+<th class="pb-6 pr-8 text-white">Durabook S15</th>
+<th class="pb-6 pr-8 text-white">Durabook S14I</th>
+<th class="pb-6 pr-8 text-white">Durabook Z14I</th>
+</tr>
+        </thead>
+        <tbody>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">IP Schutz</td>
+            <td>IP5X</td>
+            <td>IP53</td>
+            <td>IP65</td>
+            
+          </tr>
+          <tr class="text-md md:text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Gewicht</td>
+            <td>2,6 kg</td>
+            <td>2,3 kg</td>
+            <td>3,6 kg</td>
+           
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Hauptakku Laufzeit</td>
+            <td>12 Stunden</td>
+            <td>10 Stunden</td>
+            <td>12,5 Stunden</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Touchscreen</td>
+            <td>
+              <svg width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="1.35" x2="16" y2="1.35" stroke="gray" stroke-width="1.3"></line></svg>
+            </td>
+            <td>
+              optional
+            </td>
+            <td>
+              <svg width="20" height="16" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="gray"></path>
+              </svg>
+            </td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Displaygröße</td>
+            <td>15,6 Zoll</td>
+            <td>14,0 Zoll</td>
+            <td>14,0 Zoll</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Arbeitsspeicher</td>
+            <td>8 - 32GB 4800MHz DDR5</td>
+            <td>8 - 64GB 3200MHz DDR4</td>
+            <td>8 - 64GB 3200MHz DDR4</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="relative py-20 2xl:py-8 bg-gray-800">
+  <div class="container px-4 pb-20 mx-auto">
+    <div class="mb-14 text-center">
+      <h2 class="mt-8 text-5xl font-bold font-heading text-white">Tablet Vergleich</h2>
+    </div>
+    <div class="pt-20 border-t border-gray-500 overflow-x-auto overflow-y-hidden">
+      <table class="table-auto w-full mb-10">
+        <thead>
+          <tr class="text-md md:text-lg text-white text-left font-bold">
+<th class="pb-6"></th>
+<th class="pb-6 pr-8 text-white">R11L</th>
+<th class="pb-6 pr-8 text-white">R11</th>
+<th class="pb-6 pr-8 text-white">U11I</th>
+<th class="pb-6 pr-8 text-white">R8</th>
+</tr>
+        </thead>
+        <tbody>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Fallschutz</td>
+            <td>IP65</td>
+            <td>IP66</td>
+            <td>IP66</td>
+            <td>IP66</td>
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Gewicht</td>
+            <td>1,2 kg</td>
+            <td>1,2 kg</td>
+            <td>1,4 kg</td>
+            <td>0,86 kg</td>
+           
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Hauptakku Laufzeit</td>
+            <td>8 Stunden</td>
+            <td>8,5 Stunden</td>
+            <td>10 Stunden</td>
+            <td>8,5 Stunden</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Touchscreen Handschuhe</td>
+            <td>
+              <svg width="16" height="2" viewbox="0 0 16 2" fill="white" xmlns="http://www.w3.org/2000/svg"><line y1="1.35" x2="16" y2="1.35" stroke="gray" stroke-width="1.3"></line></svg>
+            </td>
+            <td>
+              <svg width="16" height="2" viewbox="0 0 16 2" fill="white" xmlns="http://www.w3.org/2000/svg"><line y1="1.35" x2="16" y2="1.35" stroke="gray" stroke-width="1.3"></line></svg>
+            </td>
+            <td>
+              <svg width="20" height="16" viewbox="0 0 20 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="gray"></path>
+              </svg>
+            </td>
+            <td>
+              <svg width="20" height="16" viewbox="0 0 20 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="gray"></path>
+              </svg>
+            </td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Displaygröße</td>
+            <td>11,6 Zoll</td>
+            <td>11,6 Zoll</td>
+            <td>11,6 Zoll</td>
+            <td>8 Zoll</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Arbeitsspeicher</td>
+            <td>4GB 2133MHz DDR4</td>
+            <td>8 - 32GB 4800MHz DDR5</td>
+            <td>8 - 16GB 24000 MHz DDR4</td>
+            <td>8 - 16GB 24000 MHz DDR4</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+    <div class="text-center mx-auto mt-20">
+      <a class="inline-block mb-4 sm:mb-0 sm:mr-4 py-5 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="/kontakt">Jetzt beraten lassen</a>
+      
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- TESTIMONIALS -->     
+    <section class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+      <div class="relative container px-4 mx-auto">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-20 lg:mb-32">
+            <h2 class="mt-12 text-5xl font-bold font-heading text-white">Das sagen unsere Kunden</h2>
+          </div>
+          <div class="relative flex flex-wrap -mx-5 mb-20">
+            <div class="w-full lg:w-1/2 px-5 mb-12 lg:mb-0">
+              <div class="flex -mx-4 lg:mx-0">
+                <div class="w-1/3 px-4">
+                  <img class="w-25 h-25 mx-auto rounded-full object-cover" src="/assets/images/testimonials/mechaniker2.webp" alt="image" loading="lazy">
+                </div>
+                <div class="w-2/3 px-4">
+                  <div class="relative inline-block mb-8 p-10 bg-gray-500 rounded-lg">
+                    <div class="absolute top-0 left-0 -ml-5 mt-10 w-14 h-14 bg-gray-500" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></div>
+                    <p class="mb-8 text-lg font-thin text-gray-200">Das Outdoor Tablet hat wirklich meine Erwartungen übertroffen. Die robusten Eigenschaften und die Leistungsfähigkeit sind einfach überzeugend.</p>
+                    <h3 class="mb-1 text-2xl text-white font-bold">Marc Maier</h3>
+                    <p class="text-white">Autohaus Maier GmbH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-5">
+              <div class="flex -mx-4 lg:mx-0">
+                <div class="w-1/3 px-4">
+                  <img class="w-25 h-25 mx-auto rounded-full object-cover object-top" src="/assets/images/testimonials/bau1.webp" alt="image" loading="lazy">
+                </div>
+                <div class="w-2/3 px-4">
+                  <div class="relative inline-block mb-8 p-10 bg-gray-500 rounded-lg">
+                    <div class="absolute top-0 right-0 left-0 -ml-5 mt-10 w-14 h-14 bg-gray-500" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></div>
+                    <p class="mb-8 text-lg font-thin text-gray-200">Das Outdoor Tablet entlastet mich im Alltag unglaublich. Ich muss mir keine Gedanken machen ob mein Tablet meiner Arbeitsumgebung stand halten kann.</p>
+                    <h3 class="mb-1 text-2xl text-white font-bold">Markus Niederhof</h3>
+                    <p class="text-white">Astra Tiefbau GmbH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        
+<!-- contact -->
+<section class="relative px-4 py-20 2xl:py-40 bg-gray-800 bs-section-dragged">
+  <div class="relative container px-4 mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="mt-10 text-5xl font-bold font-heading text-white">Kontaktieren Sie uns</h2>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap -mx-4 mb-20">
+        <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
+          <div class="bg-gray-500 rounded-lg">
+            <img class="h-64 w-full rounded-lg object-cover" src="https://image.freepik.com/free-photo/contacting-with-friends-via-computer_329181-14587.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="px-14 py-8 bg-gray-500 mt-4 rounded-lg">
+            <div class="mb-6 py-px bg-gray-500"></div>
+            <h3 class="mb-8 lg:mb-4 text-xl text-white font-bold text-center">Sie haben Fragen?</h3>
+            <div class="text-center"><a class="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white" href="/kontakt">Um Rückruf bitten</a></div>
+          </div>
+        </div>
+        <div class="w-auto lg:w-1/2">
+          <div class="py-6 px-4 mb-4 ml-0 lg:ml-4 bg-gray-500 rounded-lg ">
+            <div class="flex items-center">
+              <span class="flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
+                <svg class="w-4 h-4" width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.9347 13.3167C17.811 12.6058 17.2022 12.0401 16.4551 11.94L12.3077 11.3855C11.555 11.2832 10.8101 11.6825 10.4984 12.3528C10.4185 12.5237 10.3521 12.7014 10.2981 12.8848C9.13582 12.4 8.09277 11.7004 7.19375 10.8018C6.29473 9.90315 5.59374 8.86053 5.10992 7.6987C5.29332 7.64471 5.4711 7.57835 5.64213 7.4985C6.31274 7.18695 6.70993 6.44351 6.60866 5.69108L6.05394 1.54536C5.9538 0.797426 5.38784 0.188953 4.66434 0.0641091C4.40105 0.0202451 4.18164 0 3.97348 0C2.61201 0 1.32368 0.71982 0.612565 1.87716C-0.157059 3.13122 -0.0501675 4.73507 0.128736 5.9925C0.533802 8.84029 1.99766 11.7038 4.14451 13.8498C5.74002 15.4446 7.71246 16.6402 9.84693 17.306C10.9339 17.6457 12.2942 18 13.605 18C14.5851 18 15.537 17.802 16.3235 17.2498C17.3733 16.5109 18 15.3052 18 14.0196C18 13.8115 17.9797 13.5911 17.9347 13.3167Z" fill="white"></path>
+                </svg>
+              </span>
+              <p class="text-lg text-white">+49 (0) 69 271 470 985</p>
+            </div>
+          </div>
+          <div class="py-6 px-4 mb-8 ml-0 lg:ml-4 bg-gray-500 rounded-lg">
+            <div class="flex items-center">
+              <span class="flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
+                <svg class="w-5 h-3" width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.8109 0H2.1878C0.981688 0 0 0.980499 0 2.18676V11.8119C0 13.0182 0.981688 14 2.1878 14H18.8122C20.0183 14 21 13.0182 21 11.8119V2.18676C20.9987 0.980499 20.017 0 18.8109 0ZM19.2492 4.73317L11.716 8.67092C11.3393 8.86387 10.9193 8.96887 10.4993 8.96887C10.0794 8.96887 9.66858 8.86387 9.28273 8.67092L1.74945 4.73317V2.75511L10.0872 7.11288C10.3405 7.24414 10.6555 7.24414 10.9101 7.11288L19.2479 2.75511V4.73317H19.2492Z" fill="white"></path>
+                </svg>
+              </span>
+              <p class="text-lg text-white">kontakt@totalrugged.com</p>
+            </div>
+          </div>
+          <div class="py-6 px-2">
+            <p class="mb-2  mt-4 ml-0 lg:ml-4 font-thin text-xl text-gray-200">TotalRugged ist Ihr Partner wenn es um Beratung und Beschaffung robuster Tablets und Laptops geht.
+               <br><br>Als offizieller Durabook Partner stehen wir Ihnen jederzeit mit Rat und Tat zur Seite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+              
+
+
+    
+  </main>
+
+  <section class=" md:px-10 2xl:py-40 bg-black pt-20">
+  <div class="container mx-auto px-8 md:px-10">
+    <div class="flex flex-wrap -mx-2 md:-mx-4 pb-6 lg:pb-20 border-b border-gray-500">
+      <div class="w-full md:w-3/5">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Rechtliches</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/impressum">Impressum</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/AGB">AGB</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/datenschutz">Datenschutz</a></li>
+            </ul>
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white mt-6 md:mt-12">Unternehmen</h3>
+            <ul>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/ueber_uns">Über uns</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Tablets</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11">Durabook R11</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11l">Durabook R11L</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-u11i">Durabook U11I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r8">Durabook R8</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Laptops</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s15">Durabook S15</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s14i">Durabook S14I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-z14i">Durabook Z14I</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Branchen</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/werkstatt">Werkstatt</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/militaer">Militär</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/industrie">Industrie</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/autohaus">Autohaus</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/transport">Transport</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/logistik">Logistik</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/bau">Bau</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/oeffentliche-sicherheit">Öffentliche Sicherheit</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/landwirtschaft">Forst- und Landwirtschaft</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/outdoor">Outdoor</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+        <h3 class="mb-14 text-xl font-bold text-white">Newsletter</h3>
+        <p class="text-gray-300 mb-10">Abonnieren und alle neuen News direkt erfahren</p>
+        <form action="#">
+          <div class="max-w-sm mb-8 flex items-center bg-white text-black rounded-full">
+            <input class="pl-4 py-4 my-1 ml-1 rounded-full border-transparent placeholder-gray-200" type="email" placeholder="Email address">
+            <button class="ml-auto px-4 lg:px-6 py-4 mr-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Bestätigen</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="flex flex-wrap justify-between items-center pt-6 md:pt-10 mb-4 md:mb-8 lg:mb-0">
+      <div class="flex items-center">
+        <p class="text-sm text-white">
+          <span>Webdesign erstellt mit ❤
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</span></p>
+</div>
+</div>
+</div></section>
+</body>
+</html>

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/alpinejs.min.js"></script>
+
+  
+  
+  <title>Autohaus Laptops und Autohaus Tablets</title>
+
+</head>
+<body>
+<div x-data="{ showBanner: !localStorage.getItem('cookieConsentAccepted') }" x-show="showBanner" class="fixed bottom-0 left-0 mb-4 ml-4 mr-4 w-64 z-50">
+    <div class="bg-gray-500 rounded-lg shadow-lg p-4">
+        <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center">
+                <img src="https://www.svgrepo.com/show/401340/cookie.svg" alt="Cookie" class="h-6 w-6 mr-2" loading="lazy">
+                <span class="text-white font-bold text-sm">Cookie Richtlinien</span>
+            </div>
+            <button x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'false');" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                <svg class="h-4 w-4" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <p class="text-gray-200 text-sm pb-6">
+            Wir verwenden Cookies und andere Tracking-Technologien, um Ihr Surferlebnis auf unserer Website zu verbessern, um Ihnen personalisierte Inhalte und gezielte Werbung zu zeigen, um unseren Website-Verkehr zu analysieren und um zu verstehen, woher unsere Besucher kommen. 
+        </p>
+        <div class="flex flex-row"></div>
+        <button id="cookie-notice-accept" x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'true'); loadAdditionalScripts();" href="#" class="mt-4 bg-blue-500 hover:bg-blue-600 rounded transition duration-200 text-white font-bold py-2 px-4">
+            Akzeptieren
+        </button>
+        
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        loadAdditionalScripts();
+    });
+
+    function loadAdditionalScripts() {
+        if (localStorage.getItem('cookieConsentAccepted')) {
+            
+            //matomo
+        
+
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            _paq.push(['enableHeartBeatTimer', 5]);
+            (function() {
+                var u="//analytics.bitblade.de/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '5']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+
+
+
+            
+
+        }
+    }
+</script>
+
+
+  
+<nav class="bg-black">
+  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-4 text-gray-200">
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-phone-alt"></i> +49 (0) 69 271 470 985</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0 md:ml-4">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-envelope"></i> kontakt@totalrugged.com</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:px-4 md:text-right">
+      <a href="/kontakt" class="block text-center px-8 py-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="flex justify-between items-center w-full p-4 ml-16 text-white">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-8" alt="Flowbite Logo" loading="lazy">
+    </a>
+  </div>
+
+  
+
+    
+    <!-- display items -->
+     <div class="w-full md:hidden mt-4 ml-4 justify-between items-center">
+<button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-left p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="mega-menu-full" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+            </svg>
+      </button>
+    </div>
+    <!-- items -->
+      <div id="mega-menu-full" class="items-center justify-start ml-8 font-medium hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="md:flex xs:flex-col md:flex-row  xs:p-4 md:p-0 mt-4 rounded-lg bg-black md:bg-transparent md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              <li>
+                <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Tablets<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                  <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent mb-4 md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Laptops<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Branchen<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <a href="/ueber_uns" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Über uns</a>
+            </li>
+           
+            
+          </ul>
+       
+      </div>
+  
+
+
+<!-- dropdown 1 -->
+<div id="mega-menu-full-dropdown1" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap justify-between">
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r8/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Image Durabook R8" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R8</div>
+        </a> 
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11/A-01.webp" alt="Image Durabook R11" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11l/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11L/A-01.webp" alt="Image Durabook R11L" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11L</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-u11i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Image Durabook U11I" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook U11I</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> 
+
+
+
+   <!-- dropdown 2 -->
+   <div id="mega-menu-full-dropdown2" class="hidden mt-1 shadow-sm bg-gray-600">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap justify-between">
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s15/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_S15/front.webp" alt="Image Durabook S15" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S15</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Image Durabook S14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S14I</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-z14i" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Image Durabook Z14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook Z14I</div>
+          </a>
+        </li>
+        <!-- Falls weitere Elemente hinzufügt werden sollen -->
+      </ul>
+    </div>
+  </div>
+  
+
+<!-- dropdown 3 -->
+<div id="mega-menu-full-dropdown3" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap">
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/werkstatt/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/workshop.webp" alt="Image Werkstatt" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Werkstatt</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/autohaus/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/car_dealer.webp" alt="Image Autohaus" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Autohaus</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/militaer/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/soldiers.webp" alt="Image Militär" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Militär</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/industrie" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/industry.webp" alt="Image Industrie" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Industrie</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/sicherheit/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/police.webp" alt="Image Sicherheit" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Öffentliche Sicherheit</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/transport/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/transport.webp" alt="Image Transport" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Transport</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/logistik/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/logistic.webp" alt="Image Logistik" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Logistik</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/bau/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/construction.webp" alt="Image Bau" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Bau</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/landwirtschaft/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/agrar.webp" alt="Image Landwirtschaft" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-6">Landwirtschaft</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/outdoor/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/outdoor.webp" alt="Image Outdoor" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Outdoor</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('[data-collapse-toggle]');
+      const dropdowns = document.querySelectorAll('.hidden.mt-1');
+  
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const targetDropdownId = this.getAttribute('data-collapse-toggle');
+          const targetDropdown = document.getElementById(targetDropdownId);
+  
+          dropdowns.forEach(dropdown => {
+            if (dropdown !== targetDropdown) {
+              dropdown.classList.add('hidden');
+            }
+          });
+  
+          targetDropdown.classList.toggle('hidden');
+        });
+      });
+    });
+  </script>
+  
+  <main>
+    
+<!-- HERO SECTION -->
+<section class="pb-20 bg-gray-800" style="background:linear-gradient(0deg, rgba(15, 15, 17, 1), rgba(15, 15, 17, 0.4)), url('/assets/images/branchBanner/car_dealer.webp')" alt="Autohaus und Werkstatt Laptops und Tablets">
+    <nav class="relative"></nav>
+    <div class="relative container px-4 pt-12 md:pt-20 mx-auto">
+      <div class="flex flex-wrap items-center -mx-4 mb-20 2xl:mb-14">
+        <div class="w-full lg:w-1/2 px-4 mb-20 lg:mb-0 pl-10 sm:pl-0 lg:ml-24 mt-20">
+          <span class="text-lg lg:text-2xl font-bold text-white ml-1">Für anspruchsvolle Verkaufsumgebungen in Autohäusern</span>
+          <h1 class="mt-8 mb-12 lg:mb-16 text-6xl text-white font-bold font-heading md:text-6xl">Autohaus Laptops und Autohaus Tablets</h1>
+         
+        </div>
+        <div class="w-full ml-4 lg:w-1/2 lg:ml-24 mt-4">
+           <ul class="custom-bullet-list">
+            
+            
+              <li class="text-white font-thin custom-bullet">RS232-Serielle Schnittstelle</li>
+            
+            
+              <li class="text-white font-thin custom-bullet">Langanhaltende Akkulaufzeit und geringes Gewicht</li>
+            
+            
+              <li class="text-white font-thin custom-bullet">IP53+ und MIL-STD-810G zertifiziert</li>
+            
+            
+              <li class="text-white font-thin custom-bullet">Vorinstalliertes Windows 11</li>
+            
+            
+              <li class="text-white font-thin custom-bullet">Sprühwassergeschützt und staubresistent</li>
+            
+          </ul>
+        </div>
+      </div>
+      <a class="inline-block ml-14 md:ml-0 px-10 py-3 text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200 lg:ml-16" href="#recommend">Empfohlene Geräte</a>
+    </div>
+      
+    
+  </section>
+  
+<!-- CONTENTS -->
+  <section class="py-20 bg-gray-800 overflow-hidden">
+    <div class="container px-4 mx-auto">
+      <!-- IMG 1 -->
+      <div class="flex flex-wrap -mx-4 mb-20 lg:items-center">
+        <div class="relative w-full lg:w-1/2  mb-8 lg:mb-0 flex items-center justify-center">
+          <a href="#">
+            <img class="w-full h-auto px-4 lg:h-full object-cover rounded-xl" src="/assets/images/branchImages/Autohaus.webp" alt="Verkaufstablets Verkaufslaptops Autohaus" loading="lazy">
+          </a>
+        </div>
+        <div class="w-full lg:w-1/2 px-4 mt-10 lg:mt-0 lg:py-12 flex flex-col justify-center">
+          <a href="#">
+            <h2 class="max-w-lg mb-14 text-4xl lg:text-5xl font-bold font-heading text-white">Autohaus Laptops und Autohaus Tablets</h2>
+          </a>
+          <div class="inline-flex justify-center items-center">
+            <div class="text-left">
+              <p class="text-gray-200 text-lg font-thin">Laptops und Tablets sind aus unserem Alltag nicht mehr wegzudenken. Sie sind nicht nur im Büro oder für die Freizeit wichtig, sondern auch in Autohäusern und Werkstätten unverzichtbar geworden.<br><br>Die Digitalisierung hat auch in diesen Bereichen Einzug gehalten, um die Arbeitsabläufe zu verbessern und zu vereinfachen. In Autohäusern werden jedoch keine gewöhnlichen Laptops und Tablets genutzt. Stattdessen kommen spezielle, robuste Modelle zum Einsatz, die den hohen Anforderungen dort gerecht werden.<br><br>Diese robusten Geräte sind speziell für die Bedingungen im Autohaus entwickelt und bieten Funktionen, die sie in dieser Umgebung besonders nützlich machen. Aber warum sind gerade ein robuster Autohaus Laptop oder ein Autohaus Tablet im Autohaus so wichtig? Und welche Eigenschaften machen sie aus? Hier finden Sie die Antworten!<br><br>Obwohl Autohaus Laptops und Autohaus Tablets oft mit ähnlichen Technologien wie herkömmliche Geräte ausgestattet sind, verfügen sie über zusätzliche Merkmale wie stoßfeste Gehäuse, spritzwassergeschützte Tastaturen und lange Akkulaufzeiten, die sie ideal für den Einsatz in einer Werkstattumgebung machen. Diese speziellen Eigenschaften garantieren, dass die Geräte auch unter den anspruchsvollen Bedingungen im Autohaus zuverlässig funktionieren und den Arbeitsalltag der Mitarbeiter erleichtern.<br><br></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+      <!-- IMG 2 -->
+<div class="flex flex-wrap -mx-4 mb-20 lg:items-center">
+  <div class="w-full lg:w-1/2 px-4 lg:py-12 flex flex-col justify-center">
+    <a href="#">
+      <h2 class="max-w-lg mb-14 text-4xl lg:text-5xl font-bold font-heading text-white">Warum macht ein Autohaus Laptop und Autohaus Tablet Sinn?</h2>
+    </a>
+    <div class="inline-flex justify-center items-center">
+      <div class="text-left">
+        <p class="text-gray-200 font-thin text-lg">In Autohäusern sind robuste Autohaus Laptops und Autohaus Tablets echt wichtig, insbesondere wenn es um den professionellen Service für Kunden geht. Diese Geräte müssen den anspruchsvollen Bedingungen in Werkstätten standhalten, wo es oft staubig und dreckig ist. Robuste Autohaus Laptops und Autohaus Tablets, wie sie in Autohäusern verwendet werden, sind darauf ausgelegt, solchen Bedingungen zu trotzen und sicherzustellen, dass alles reibungslos läuft.<br><br>Das ständige Hin- und Herschieben dieser robusten Geräte auf den rauen Werkstatttischen birgt auch seine Risiken. Es kann vorkommen, dass sie Stöße abbekommen oder beschädigt werden. Normale Geräte sind in solchen Umgebungen nicht stabil genug. Deshalb sind spezielle Technologien wie die in Autohäusern verwendeten robusten Laptops und Tablets unverzichtbar.<br><br>Diese robusten Geräte schützen nicht nur vor Staub und Stößen, sondern sind auch darauf ausgelegt, den harten Bedingungen in Werkstätten standzuhalten. Autohäuser müssen hohe Anforderungen erfüllen, und diese speziellen Geräte spielen eine Schlüsselrolle dabei, alles am Laufen zu halten und die Kunden zufriedenzustellen.<br><br></p>
+      </div>
+    </div>
+  </div>
+  <div class="relative w-full lg:w-1/2 px-4 mb-8 lg:mb-0 flex items-center justify-center">
+    <a href="#">
+      <img class="w-full h-auto lg:h-full object-cover rounded-xl" src="/assets/images/branchImages/Werkstatt1.webp" alt="Auto Werkstatt Tablets Laptops Reparatur" loading="lazy">
+    </a>
+  </div>
+</div>
+</div>
+  
+</section>
+
+  <!-- use cases -->
+  <section class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden bs-section-dragged">
+    <h2 class="text-4xl lg:text-5xl leading-tight font-bold font-heading text-center text-white mb-20">Anwendungsfälle</h2>
+    <div class="relative container px-12 mx-auto">
+        <div>
+            <div class="flex flex-wrap -m-10">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+                    <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+                        <span class="flex mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+                            <img src="/assets/icons_usecases/backup.webp" alt="Backups Icon" loading="lazy">
+                        </span>
+                        <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Backups</h3>
+                        <p class="text-lg font-thin text-gray-200">Speichern Sie Kundendaten sicher und bequem direkt während des Gesprächs mit einem Autohaus Tablet oder Laptop. So haben Sie alle wichtigen Dokumente sofort griffbereit und arbeiten stets effizient, egal ob in der Werkstatt oder im Büro.<br></p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+                    <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+                        <span class="flex mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+                            <img src="/assets/icons_usecases/beratung.webp" alt="Beratung Icon" loading="lazy">
+                        </span>
+                        <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Beratung</h3>
+                        <p class="text-lg font-thin text-gray-200">Mit einem Autohaus Tablet oder Laptop können Sie Ihre Ideen direkt skizzieren und sofort mit Kunden oder Geschäftspartnern teilen. Das erleichtert die Kommunikation und fördert gemeinsame Innovation.<br></p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+                    <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+                        <span class="flex mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+                            <img src="/assets/icons_usecases/schnittstellen.webp" alt="Schnittstellen Icon" loading="lazy">
+                        </span>
+                        <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Schnittstelle</h3>
+                        <p class="text-lg font-thin text-gray-200">Verbinden Sie Ihre Geräte einfach über die optionale serielle Schnittstelle (RS232) und ermöglichen Sie schnelle, zuverlässige Kommunikation ohne zusätzliche Software. Das optimiert Ihre Arbeitsabläufe und erleichtert den Datenaustausch sowie Steuerungsfunktionen im Autohaus.<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+    <div class="relative container px-4 mx-auto">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-20 lg:mb-32">
+          <h2 class="mt-12 text-5xl font-bold font-heading text-white">Das sagen unsere Kunden</h2>
+        </div>
+        <div class="relative flex flex-wrap -mx-5 mb-20">
+          <div class="w-full lg:w-1/2 px-5 mb-12 lg:mb-0">
+            <div class="flex -mx-4 lg:mx-0">
+              <div class="w-1/3 px-4">
+                <img class="w-25 h-25 mx-auto rounded-full object-cover" src="/assets/images/branchen_testi/autohaus_frau.webp" alt="Bewertung Autohaus Laptops Tablets" loading="lazy">
+              </div>
+              <div class="w-full px-4">
+                <div class="relative inline-block mb-8 p-10 bg-gray-600 rounded-lg">
+                  <div class="absolute top-0 left-0 -ml-5 mt-10 w-14 h-14 bg-gray-600" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></div>
+                  <p class="mb-8 text-lg font-thin text-gray-200">Seit wir in unserem Autohaus auf robuste Laptops und Tablets umgestiegen sind, hat sich mein Arbeitsalltag wirklich verbessert. Als Serviceberaterin kann ich jetzt viel schneller auf Kundenanfragen reagieren und habe alle wichtigen Informationen sofort zur Hand. Diese speziell entwickelten Geräte sind nicht nur praktisch, sondern machen auch richtig Spaß zu benutzen!</p>
+                  
+                  <h3 class="mb-1 text-2xl text-white font-bold">Lisa Munter</h3>
+                  <p class="text-white">Autohaus Wagner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 px-5">
+            <div class="flex -mx-4 lg:mx-0">
+              <div class="w-1/3 px-4">
+                <img class="w-25 h-25 mx-auto rounded-full object-cover object-top" src="/assets/images/branchen_testi/autohaus-mann.webp" alt="Erfahrung Autohaus Laptops Tablets" loading="lazy">
+              </div>
+              <div class="w-full px-4">
+                <div class="relative inline-block mb-8 p-10 bg-gray-500 rounded-lg">
+                  <div class="absolute top-0 right-0 left-0 -ml-5 mt-10 w-14 h-14 bg-gray-500" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></div>
+                  <p class="mb-8 text-lg font-thin text-gray-200">Als Werkstattleiter im Autohaus war ich anfangs skeptisch gegenüber der Einführung von robusten Laptops und Tablets. Doch ich wurde schnell eines Besseren belehrt! Diese Geräte haben nicht nur unsere Arbeitsabläufe optimiert, sondern auch das Team enger zusammengebracht. Die Möglichkeit, Daten direkt vor Ort zu erfassen und zu teilen, hat uns wirklich zu einem effizienteren und kollaborativeren Team gemacht. Ein echter Gewinn für unser Autohaus!</p>
+                  
+                  <h3 class="mb-1 text-2xl text-white font-bold">David Rombach</h3>
+                  <p class="text-white">Autohaus Meyer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      
+      </div>
+      </div>
+    </div>
+  </section>
+
+<!-- LAPTOPS -->
+
+<section id="recommend" class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden bs-section-dragged">
+  <h1 class="text-5xl text-center leading-tight font-bold font-heading text-white mb-8">Empfohlene Geräte</h1>
+  <div class="relative container px-4 md:px-8 lg:px-32 mx-auto">
+    <div class="grid lg:grid-cols-3 gap-4">
+
+      
+        
+   
+        
+
+     
+
+      <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+        
+        <div class="flex justify-center items-center h-48">
+          <img class="rounded-lg text-center pt-8 w-64" src="/assets/images/L_S15/front.webp" alt="Durabook S15" loading="lazy">
+        </div>
+        <h3 class="text-3xl mb-2 mt-4 p-12 leading-tight font-bold font-heading text-white text-center">Durabook S15</h3>
+        <div class="h-64">
+          <ul class="text-lg font-thin text-gray-200 leading-loose mb-2">
+            
+              <li>· 15,6 Zoll Full HD</li>
+            
+              <li>· IP5X und MIL-STD-810G</li>
+            
+              <li>· Intel® Core™ i5-1235U</li>
+            
+              <li>· 8 GB DDR5 RAM</li>
+            
+              <li>· 256 GB PCIe SSD</li>
+            
+              <li>· 12 Stunden Akkulaufzeit</li>
+            
+          </ul>
+        </div>
+        <div class="text-center mt-1">
+          <a class="inline-block px-6 py-3 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-s15">Mehr erfahren</a>
+        </div>
+      </div>
+  
+  
+  
+      
+        
+   
+        
+
+     
+
+      <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+        
+        <div class="flex justify-center items-center h-48">
+          <img class="rounded-lg text-center pt-8 w-64" src="/assets/images/T_R11/front.webp" alt="Durabook R11" loading="lazy">
+        </div>
+        <h3 class="text-3xl mb-2 mt-4 p-12 leading-tight font-bold font-heading text-white text-center">Durabook R11</h3>
+        <div class="h-64">
+          <ul class="text-lg font-thin text-gray-200 leading-loose mb-2">
+            
+              <li>· 11,6 Zoll Full HD Touchscreen</li>
+            
+              <li>· IP66 und MIL-STD-810H</li>
+            
+              <li>· Intel® Core™ i5-1235U</li>
+            
+              <li>· 8 - 32 GB DDR5 RAM</li>
+            
+              <li>· 256 GB - 1 TB PCIe SSD</li>
+            
+              <li>· 8,5 Stunden Akkulaufzeit</li>
+            
+          </ul>
+        </div>
+        <div class="text-center mt-1">
+          <a class="inline-block px-6 py-3 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-r11">Mehr erfahren</a>
+        </div>
+      </div>
+  
+  
+  
+      
+        
+   
+        
+
+     
+
+      <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+        
+        <div class="flex justify-center items-center h-48">
+          <img class="rounded-lg text-center pt-8 w-64" src="/assets/images/L_S14I/S14I-opened-front-win-11.webp" alt="Durabook S14I" loading="lazy">
+        </div>
+        <h3 class="text-3xl mb-2 mt-4 p-12 leading-tight font-bold font-heading text-white text-center">Durabook S14I</h3>
+        <div class="h-64">
+          <ul class="text-lg font-thin text-gray-200 leading-loose mb-2">
+            
+              <li>· 14 Zoll Full HD</li>
+            
+              <li>· IP53 und MIL-STD-810G</li>
+            
+              <li>· Intel® Core™ i5-1135G7</li>
+            
+              <li>· 8 - 64 GB DDR4 RAM</li>
+            
+              <li>· 256 GB - 1 TB PCIe SSD</li>
+            
+              <li>· 10 Stunden Akkulaufzeit</li>
+            
+          </ul>
+        </div>
+        <div class="text-center mt-1">
+          <a class="inline-block px-6 py-3 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-s14i">Mehr erfahren</a>
+        </div>
+      </div>
+  
+  
+  
+        
+    </div>
+  </div>
+</section>
+  <!-- contact -->
+  <section class="relative px-4 py-20 2xl:py-40 bg-gray-800 bs-section-dragged">
+  <div class="relative container px-4 mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="mt-10 text-5xl font-bold font-heading text-white">Kontaktieren Sie uns</h2>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap -mx-4 mb-20">
+        <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
+          <div class="bg-gray-500 rounded-lg">
+            <img class="h-64 w-full rounded-lg object-cover" src="https://image.freepik.com/free-photo/contacting-with-friends-via-computer_329181-14587.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="px-14 py-8 bg-gray-500 mt-4 rounded-lg">
+            <div class="mb-6 py-px bg-gray-500"></div>
+            <h3 class="mb-8 lg:mb-4 text-xl text-white font-bold text-center">Sie haben Fragen?</h3>
+            <div class="text-center"><a class="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white" href="/kontakt">Um Rückruf bitten</a></div>
+          </div>
+        </div>
+        <div class="w-auto lg:w-1/2">
+          <div class="py-6 px-4 mb-4 ml-0 lg:ml-4 bg-gray-500 rounded-lg ">
+            <div class="flex items-center">
+              <span class="flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
+                <svg class="w-4 h-4" width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.9347 13.3167C17.811 12.6058 17.2022 12.0401 16.4551 11.94L12.3077 11.3855C11.555 11.2832 10.8101 11.6825 10.4984 12.3528C10.4185 12.5237 10.3521 12.7014 10.2981 12.8848C9.13582 12.4 8.09277 11.7004 7.19375 10.8018C6.29473 9.90315 5.59374 8.86053 5.10992 7.6987C5.29332 7.64471 5.4711 7.57835 5.64213 7.4985C6.31274 7.18695 6.70993 6.44351 6.60866 5.69108L6.05394 1.54536C5.9538 0.797426 5.38784 0.188953 4.66434 0.0641091C4.40105 0.0202451 4.18164 0 3.97348 0C2.61201 0 1.32368 0.71982 0.612565 1.87716C-0.157059 3.13122 -0.0501675 4.73507 0.128736 5.9925C0.533802 8.84029 1.99766 11.7038 4.14451 13.8498C5.74002 15.4446 7.71246 16.6402 9.84693 17.306C10.9339 17.6457 12.2942 18 13.605 18C14.5851 18 15.537 17.802 16.3235 17.2498C17.3733 16.5109 18 15.3052 18 14.0196C18 13.8115 17.9797 13.5911 17.9347 13.3167Z" fill="white"></path>
+                </svg>
+              </span>
+              <p class="text-lg text-white">+49 (0) 69 271 470 985</p>
+            </div>
+          </div>
+          <div class="py-6 px-4 mb-8 ml-0 lg:ml-4 bg-gray-500 rounded-lg">
+            <div class="flex items-center">
+              <span class="flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
+                <svg class="w-5 h-3" width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.8109 0H2.1878C0.981688 0 0 0.980499 0 2.18676V11.8119C0 13.0182 0.981688 14 2.1878 14H18.8122C20.0183 14 21 13.0182 21 11.8119V2.18676C20.9987 0.980499 20.017 0 18.8109 0ZM19.2492 4.73317L11.716 8.67092C11.3393 8.86387 10.9193 8.96887 10.4993 8.96887C10.0794 8.96887 9.66858 8.86387 9.28273 8.67092L1.74945 4.73317V2.75511L10.0872 7.11288C10.3405 7.24414 10.6555 7.24414 10.9101 7.11288L19.2479 2.75511V4.73317H19.2492Z" fill="white"></path>
+                </svg>
+              </span>
+              <p class="text-lg text-white">kontakt@totalrugged.com</p>
+            </div>
+          </div>
+          <div class="py-6 px-2">
+            <p class="mb-2  mt-4 ml-0 lg:ml-4 font-thin text-xl text-gray-200">TotalRugged ist Ihr Partner wenn es um Beratung und Beschaffung robuster Tablets und Laptops geht.
+               <br><br>Als offizieller Durabook Partner stehen wir Ihnen jederzeit mit Rat und Tat zur Seite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ 
+  
+    
+  </main>
+
+  <section class=" md:px-10 2xl:py-40 bg-black pt-20">
+  <div class="container mx-auto px-8 md:px-10">
+    <div class="flex flex-wrap -mx-2 md:-mx-4 pb-6 lg:pb-20 border-b border-gray-500">
+      <div class="w-full md:w-3/5">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Rechtliches</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/impressum">Impressum</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/AGB">AGB</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/datenschutz">Datenschutz</a></li>
+            </ul>
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white mt-6 md:mt-12">Unternehmen</h3>
+            <ul>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/ueber_uns">Über uns</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Tablets</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11">Durabook R11</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11l">Durabook R11L</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-u11i">Durabook U11I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r8">Durabook R8</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Laptops</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s15">Durabook S15</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s14i">Durabook S14I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-z14i">Durabook Z14I</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Branchen</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/werkstatt">Werkstatt</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/militaer">Militär</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/industrie">Industrie</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/autohaus">Autohaus</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/transport">Transport</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/logistik">Logistik</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/bau">Bau</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/oeffentliche-sicherheit">Öffentliche Sicherheit</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/landwirtschaft">Forst- und Landwirtschaft</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/outdoor">Outdoor</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+        <h3 class="mb-14 text-xl font-bold text-white">Newsletter</h3>
+        <p class="text-gray-300 mb-10">Abonnieren und alle neuen News direkt erfahren</p>
+        <form action="#">
+          <div class="max-w-sm mb-8 flex items-center bg-white text-black rounded-full">
+            <input class="pl-4 py-4 my-1 ml-1 rounded-full border-transparent placeholder-gray-200" type="email" placeholder="Email address">
+            <button class="ml-auto px-4 lg:px-6 py-4 mr-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Bestätigen</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="flex flex-wrap justify-between items-center pt-6 md:pt-10 mb-4 md:mb-8 lg:mb-0">
+      <div class="flex items-center">
+        <p class="text-sm text-white">
+          <span>Webdesign erstellt mit ❤
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</span></p>
+</div>
+</div>
+</div></section>
+</body>
+</html>

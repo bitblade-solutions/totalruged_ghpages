@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/alpinejs.min.js"></script>
+
+  
+  
+  <title>Welcome to TotalRugged</title>
+
+</head>
+<body>
+<div x-data="{ showBanner: !localStorage.getItem('cookieConsentAccepted') }" x-show="showBanner" class="fixed bottom-0 left-0 mb-4 ml-4 mr-4 w-64 z-50">
+    <div class="bg-gray-500 rounded-lg shadow-lg p-4">
+        <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center">
+                <img src="https://www.svgrepo.com/show/401340/cookie.svg" alt="Cookie" class="h-6 w-6 mr-2" loading="lazy">
+                <span class="text-white font-bold text-sm">Cookie Richtlinien</span>
+            </div>
+            <button x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'false');" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                <svg class="h-4 w-4" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <p class="text-gray-200 text-sm pb-6">
+            Wir verwenden Cookies und andere Tracking-Technologien, um Ihr Surferlebnis auf unserer Website zu verbessern, um Ihnen personalisierte Inhalte und gezielte Werbung zu zeigen, um unseren Website-Verkehr zu analysieren und um zu verstehen, woher unsere Besucher kommen. 
+        </p>
+        <div class="flex flex-row"></div>
+        <button id="cookie-notice-accept" x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'true'); loadAdditionalScripts();" href="#" class="mt-4 bg-blue-500 hover:bg-blue-600 rounded transition duration-200 text-white font-bold py-2 px-4">
+            Akzeptieren
+        </button>
+        
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        loadAdditionalScripts();
+    });
+
+    function loadAdditionalScripts() {
+        if (localStorage.getItem('cookieConsentAccepted')) {
+            
+            //matomo
+        
+
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            _paq.push(['enableHeartBeatTimer', 5]);
+            (function() {
+                var u="//analytics.bitblade.de/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '5']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+
+
+
+            
+
+        }
+    }
+</script>
+
+
+  
+<nav class="bg-black">
+  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-4 text-gray-200">
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-phone-alt"></i> +49 (0) 69 271 470 985</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0 md:ml-4">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-envelope"></i> kontakt@totalrugged.com</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:px-4 md:text-right">
+      <a href="/kontakt" class="block text-center px-8 py-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="flex justify-between items-center w-full p-4 ml-16 text-white">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-8" alt="Flowbite Logo" loading="lazy">
+    </a>
+  </div>
+
+  
+
+    
+    <!-- display items -->
+     <div class="w-full md:hidden mt-4 ml-4 justify-between items-center">
+<button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-left p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="mega-menu-full" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+            </svg>
+      </button>
+    </div>
+    <!-- items -->
+      <div id="mega-menu-full" class="items-center justify-start ml-8 font-medium hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="md:flex xs:flex-col md:flex-row  xs:p-4 md:p-0 mt-4 rounded-lg bg-black md:bg-transparent md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              <li>
+                <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Tablets<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                  <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent mb-4 md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Laptops<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Branchen<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <a href="/ueber_uns" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Über uns</a>
+            </li>
+           
+            
+          </ul>
+       
+      </div>
+  
+
+
+<!-- dropdown 1 -->
+<div id="mega-menu-full-dropdown1" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap justify-between">
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r8/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Image Durabook R8" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R8</div>
+        </a> 
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11/A-01.webp" alt="Image Durabook R11" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11l/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11L/A-01.webp" alt="Image Durabook R11L" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11L</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-u11i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Image Durabook U11I" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook U11I</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> 
+
+
+
+   <!-- dropdown 2 -->
+   <div id="mega-menu-full-dropdown2" class="hidden mt-1 shadow-sm bg-gray-600">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap justify-between">
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s15/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_S15/front.webp" alt="Image Durabook S15" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S15</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Image Durabook S14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S14I</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-z14i" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Image Durabook Z14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook Z14I</div>
+          </a>
+        </li>
+        <!-- Falls weitere Elemente hinzufügt werden sollen -->
+      </ul>
+    </div>
+  </div>
+  
+
+<!-- dropdown 3 -->
+<div id="mega-menu-full-dropdown3" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap">
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/werkstatt/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/workshop.webp" alt="Image Werkstatt" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Werkstatt</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/autohaus/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/car_dealer.webp" alt="Image Autohaus" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Autohaus</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/militaer/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/soldiers.webp" alt="Image Militär" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Militär</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/industrie" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/industry.webp" alt="Image Industrie" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Industrie</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/sicherheit/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/police.webp" alt="Image Sicherheit" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Öffentliche Sicherheit</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/transport/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/transport.webp" alt="Image Transport" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Transport</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/logistik/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/logistic.webp" alt="Image Logistik" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Logistik</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/bau/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/construction.webp" alt="Image Bau" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Bau</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/landwirtschaft/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/agrar.webp" alt="Image Landwirtschaft" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-6">Landwirtschaft</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/outdoor/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/outdoor.webp" alt="Image Outdoor" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Outdoor</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('[data-collapse-toggle]');
+      const dropdowns = document.querySelectorAll('.hidden.mt-1');
+  
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const targetDropdownId = this.getAttribute('data-collapse-toggle');
+          const targetDropdown = document.getElementById(targetDropdownId);
+  
+          dropdowns.forEach(dropdown => {
+            if (dropdown !== targetDropdown) {
+              dropdown.classList.add('hidden');
+            }
+          });
+  
+          targetDropdown.classList.toggle('hidden');
+        });
+      });
+    });
+  </script>
+  
+  <main>
+    <!-- hero section -->                
+<section class="relative bg-gray-800 overflow-hidden">
+  <div class="relative h-auto w-screen">
+    <video autoplay muted loop preload="none" poster="/assets/videos/thumbnail.webp" id="background-video" class="absolute top-0 left-0 w-full h-full object-cover">
+      <source src="/assets/videos/totalrugged.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </source></video>
+    <div class="relative z-10">
+      <div class="absolute inset-0 bg-gradient"></div>
+      <div class="relative container mb-24 px-4 pt-24 md:pt-40 pb-8 mx-auto">
+          <div class="flex flex-wrap items-center -mx-4 mb-12 md:mb-24 p-10">
+              <div class="w-full lg:w-1/2 px-4 mb-20 lg:mb-0 pl-10">
+                  <span class="text-lg lg:text-2xl font-bold text-white">Für Raue Umgebungen</span>
+                  <h2 class="mt-2 mb-12 lg:mb-16 text-6xl text-white font-bold font-heading md:text-6xl">Robuste Laptops und Tablets</h2>
+                  <a class="inline-block px-8 py-3 text-md md:text-lg text-center text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="/kontakt">Unabhängig Beraten Lassen</a>
+              </div>
+          </div>
+          <div class="flex justify-center mt-10">
+              <img src="assets/images/Sonstige%20Bilder/video_image.webp" alt="Image" class="inset-0 slide-in-right lg:w-2/3" loading="lazy">
+          </div>
+    </div>
+  </div>
+ 
+  </div>
+</section>
+
+
+<!-- section 1 -->
+  <section class="py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+    <div class="container px-1 mx-auto">
+      <div class="max-w-xl mx-auto mb-24 text-center">
+        <h2 class="mt-2 mb-8 text-4xl lg:text-4xl text-white font-bold font-heading">Einfach zum passenden Gerät</h2>
+      </div>
+      <div class="relative px-8 mx-4 lg:pr-0 lg:pl-12 2xl:pl-24 mb-14 lg:mb-40 bg-gray-500 rounded-xl overflow-hidden">
+        <div class="w-full lg:w-1/3 pt-12 lg:py-12 pr-8">
+          <h3 class="mb-4 ml-6 text-xl font-bold text-white">Wie funktionierts?</h3>
+          <p class="text-xl p-4 ml-2 font-thin text-gray-200">Den Kauf von robusten mobilen Geräten gestalten wir für Sie so einfach wie möglich.</p>
+        </div>
+        <img class="p-4 ml- lg:absolute top-0 right-0 bottom-0 h-full w-full lg:w-1/3 object-cover rounded-xl -ml-7 mb-6" src="assets/images/Sonstige%20Bilder/customer-copy.webp" alt="" loading="lazy">
+      </div>
+
+      <!-- Section 2 -->
+      <div class="relative flex flex-wrap justify-center mt-20">
+        <div class="w-full lg:w-1/3 px-10 mb-12">
+          <div class="relative flex">
+            <div class="mr-8 -mt-3">
+              <span class="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">1</span>
+            </div>
+            <div class="max-w-xs">
+              <h3 class="mb-6 text-lg font-bold font-heading text-white">Produkt aussuchen</h3>
+              <p class="text-lg font-thin text-gray-200">Werfen Sie einen Blick auf unser Produktportfolio und suchen Sie sich das am besten passende Gerät aus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/3 px-10 mb-12">
+          <div class="flex">
+            <div class="mr-8 -mt-3">
+              <span class="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">2</span>
+            </div>
+            <div class="max-w-xs">
+              <h3 class="mb-6 text-lg font-bold font-heading text-white">Angebot Anfragen</h3>
+              <p class="text-lg font-thin text-gray-200">Fragen Sie ein unverbindliches Angebot an, welches wir Ihnen schnellstmöglich zusenden.</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/3 px-10">
+          <div class="flex">
+            <div class="mr-8 -mt-3">
+              <span class="flex justify-center items-center w-14 h-14 text-white bg-blue-500 text-lg font-bold rounded-full">3</span>
+            </div>
+            <div class="max-w-xs">
+              <h3 class="mb-6 text-lg font-bold font-heading text-white">Beratung und Abschluss</h3>
+              <p class="text-lg font-thin text-gray-200">Wir beraten Sie ausgiebig zu Ihren Anforderungen und begleiten Sie beim Projektabschluss.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-14">
+        <a class="inline-block px-10 py-3 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white" href="#uebersicht">Jetzt Geräte entdecken</a>
+      </div>
+    </div>
+  </section>
+  
+<!-- Features -->
+<section class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+  <div class="relative container px-12 mx-auto">
+    <div>
+      <div class="flex flex-wrap -m-10">
+        <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+          <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+            <span class="flex -mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewbox="0 0 256 256"><g fill="white" fill-rule="evenodd"><path d="M128 193.901c-13.606 0-21.823 9.814-23.434 22.258C62.374 207.79 36 172.65 36 128c0-50.81 41.19-92 92-92s92 41.19 92 92c0 44.21-25.713 77.476-67.501 86.16c-1.346-8.684-11.008-20.259-24.499-20.259m-.244-18.45c16.601 0 29.657 10.87 32.244 17.732c31.34-6.861 42.826-42.019 42.826-65.183c0-40.149-36.718-76-74.826-76c-38.108 0-75.313 35.851-75.313 76c0 35.28 21.881 61.702 43.313 66.628c2.095-10.012 15.155-19.178 31.756-19.178z"></path><circle cx="80" cy="125" r="11"></circle><circle cx="95" cy="92" r="11"></circle><circle cx="128" cy="79" r="11"></circle><circle cx="161" cy="92" r="11"></circle><circle cx="174" cy="124" r="11"></circle></g></svg>
+            </span>
+            <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Schnittstellen</h3>
+            <p class="text-lg font-thin text-gray-200">Mit einer großen Auswahl an Schnittstellen bleiben Sie stets flexibel.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+          <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+            <span class="flex -mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24"><path fill="white" d="M15 22.007H5v-2h10ZM22 4l-4.735 5.955l-.22.27l-5.63 7.19a2.001 2.001 0 1 1-2.83-2.83ZM2.645 7.234A10.84 10.84 0 0 0 1.19 15H2v-1a9.7 9.7 0 0 1 1.69-5.52ZM12 2a10.96 10.96 0 0 0-8.119 3.597L5.025 6.96A7.43 7.43 0 0 1 10 5a7.43 7.43 0 0 1 4.997 1.978l3.55-2.802A10.94 10.94 0 0 0 12 2m6.83 9.2l-.233.287l-.728.93A10 10 0 0 1 18 14v1h4.81a10.88 10.88 0 0 0-1.183-7.318Z"></path></svg>
+            </span>
+            <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Leistungsstark</h3>
+            <p class="text-lg font-thin text-gray-200">Stark in der Perfomance dank der neuesten Generation Intel Prozessoren. </p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+          <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+            <span class="flex -mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 2048 2048"><path fill="white" d="M1024 1024h768v896H128V256h896zM256 384v640h640V384zm640 1408v-640H256v640zm768 0v-640h-640v640zM1280 0h768v768h-768zm640 640V128h-512v512z"></path></svg>
+            </span>
+            <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Zubehör</h3>
+            <p class="text-lg font-thin text-gray-200">Individuelles Zubehör hilft Ihnen den Arbeitsalltag noch besser zu meistern.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+          <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+            <span class="flex -mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24"><path fill="white" d="M14.654 21.846q-.529 0-.9-.37t-.37-.899v-5.923q0-.529.37-.9t.9-.37h5.923q.529 0 .899.37t.37.9v5.923q0 .529-.37.899t-.899.37zm2.962-4.23q.528 0 .899-.37q.37-.371.37-.9t-.37-.899t-.9-.37q-.528 0-.899.37q-.37.37-.37.9q0 .528.37.898t.9.37M11 17.388V21h-.098q-.348 0-.575-.232t-.29-.568l-.264-2.092q-.479-.144-1.035-.454q-.557-.31-.948-.663l-1.915.823q-.317.14-.644.03t-.504-.415L3.648 15.57q-.177-.305-.1-.637t.344-.547l1.672-1.25q-.045-.272-.073-.559q-.03-.288-.03-.55q0-.26.03-.539q.028-.278.073-.626l-1.672-1.25q-.275-.213-.338-.555t.113-.648l1.06-1.8q.182-.295.506-.41t.642.025l1.896.804q.448-.373.97-.673q.52-.3 1.013-.464l.283-2.092q.061-.342.315-.571Q10.608 3 10.96 3h2.08q.353 0 .608.229q.254.229.315.571l.264 2.112q.575.202 1.016.463t.909.654l1.992-.804q.318-.14.642-.025t.506.41l1.06 1.819q.177.306.1.643q-.076.338-.344.542l-1.216.911q-.176.135-.362.133t-.346-.173t-.148-.38t.183-.347l1.225-.908l-.994-1.7l-2.552 1.07q-.454-.499-1.193-.935q-.74-.435-1.4-.577L13 4h-1.994l-.312 2.689q-.756.161-1.39.52q-.633.358-1.26.985L5.55 7.15l-.994 1.7l2.169 1.62q-.125.336-.175.73t-.05.814q0 .395.05.766q.05.37.156.726l-2.15 1.644l.994 1.7l2.475-1.05q.6.6 1.363.996t1.612.59m.973-7.886q-1.046 0-1.773.723T9.473 12q0 .467.16.89t.479.777q.16.183.366.206q.207.023.384-.141q.177-.15.181-.35t-.154-.348q-.208-.2-.312-.47T10.473 12q0-.625.438-1.063t1.062-.437q.29 0 .565.116q.276.117.476.324q.146.148.338.134q.192-.015.346-.191q.154-.177.134-.381t-.197-.364q-.312-.3-.754-.469t-.908-.169m3.085 11.077h5.107q.17 0 .29-.121t.122-.283v-.039q0-.122-.04-.224t-.121-.204q-.531-.57-1.241-.907t-1.56-.337q-.848 0-1.559.337q-.71.338-1.24.907q-.05.05-.162.429v.038q0 .162.121.283t.283.121"></path></svg>
+            </span>
+            <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Individuelle Konfiguration</h3>
+            <p class="text-lg pb-8 font-thin text-gray-200">Konfigurieren Sie Ihr robustes Gerät nach Bedarf und Wunsch.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+          <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+            <span class="flex -mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 24 24"><path fill="white" d="M16.577 21.48v-2.634h-1.538l2.384-4.327v2.635h1.539zM8.692 21q-.343 0-.575-.232t-.233-.576V5.288q0-.343.233-.575t.575-.232h1.616V3h3.384v1.48h1.62q.344 0 .574.233q.23.232.23.576v6.903q-2.135.275-3.587 1.897t-1.452 3.853q0 .843.227 1.618t.663 1.44z"></path></svg>
+            </span>
+            <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Mehr Power</h3>
+            <p class="text-lg font-thin text-gray-200">Sie brauchen mehr Power? Kein Problem. Unsere Wechselakkus helfen Ihnen wenn es mal wieder länger dauert.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 p-2 flex">
+          <div class="p-8 bg-gray-500 rounded-lg flex flex-col flex-grow">
+            <span class="flex -mb-4 justify-center items-center w-16 h-16 bg-blue-500 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 512 512"><path fill="white" d="M21.25 19.03v53.25c64.79 65.858 124.522 170.327 154.156 274.5l-49.78-65.655C97.592 216.785 60.5 158.113 21.25 114v28.906c27.632 34.17 53.875 75.99 75.813 121.47l29.156 125.25l-83.064-44.72L90 436.5l-63.188-5.688l56.094 55.407H173.5l-28.625-41.814l49.094 12.938l1.718-64.594l40.468 46.5l40.47-80.97l-.845 90.44l41.345-31l-29.375 68.5h138.125l66.72-100.126l-85.19 23.437l52.533-104.374l-104.375 32.656l57.312-193.843l-128.78 158.436C260.76 197.538 207.368 90.266 150.81 19.03h-24.218c41.91 49.386 83.752 122.4 112.75 199.97l-8.25 41.125c-35.752-93.2-90.41-180.8-139.938-241.094H21.25zm369.656 49.126l-60 56.03l-2.125 78.533l49.345-74.25l12.78-60.314zm103.688 241.406l-34.438 56.657l34.438-16.94z"></path></svg>
+            </span>
+            <h3 class="mt-12 mb-6 text-3xl font-bold font-heading text-white">Unverwüstlich</h3>
+            <p class="text-lg font-thin text-gray-200">Ob Flüssigkeiten, Schmutz oder Sturz, unsere robusten Laptops und Tablets lassen Sie nie im Stich.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- call us -->
+  <section class="relative pb-20 lg:pb-40 lg:pt-20 2xl:py-40 bg-gray-800 overflow-hidden">
+    <div class="relative w-full lg:w-1/2 lg:ml-auto mb-4 lg:mb-0">
+      <img class="hidden lg:block lg:absolute right-0 top-0 w-full h-128 object-cover mr-12 rounded-xl mt-8" src="assets/images/Sonstige%20Bilder/ask_offer.webp" alt="" loading="lazy">
+    </div>
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full lg:w-1/2 px-4">
+          <div class="max-w-lg ml-10">
+            <h2 class="mb-4 -ml-4 lg:mb-20 text-5xl lg:text-7xl lg:text-center font-bold font-heading text-white mt-4">Mehr erfahren</h2>
+            <div class="flex items-center mb-8 pb-14 border-b border-gray-500">
+              <div class="max-w-sm">
+                <p class="text-lg font-thin text-gray-200 mr-6 ml-8">Möchten Sie detaillierte Informationen zu unseren Produkten? Wir beraten sie gerne. Senden Sie uns einfach eine Nachricht.</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center -ml-10">
+              <a class="inline-block mb-4 sm:mb-0 sm:mr-4 py-5 px-12  font-bold bg-blue-500  hover:bg-blue-600 rounded-full transition duration-200" href="/kontakt"><span class="text-white">Nachricht senden</span></a>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+            
+   
+   
+<!-- Industry -->
+<section class="py-12 2xl:py-40 bg-gray-800 bs-section-dragged">
+  <div class="container mx-auto px-4 lg:max-w-screen-xl">
+    <div class="max-w-4xl mx-auto">
+      <div class="mx-auto mb-12 lg:mb-16">
+        <h2 class="mt-8 text-5xl font-bold font-heading text-white mb-4 text-center">Branchen</h2>
+        <p class="mb-2 ml-2 font-thin text-xl text-gray-200">Wir haben uns auf Branchen spezialisiert, die zuverlässige und robuste Geräte brauchen, um ihre Arbeit effizient und mühelos zu erledigen.<br>
+          In zahlreichen Bereichen, sei es in der Industrie oder in Werkstätten, ist beispielsweise die RS232 Schnittstelle unverzichtbar. Deshalb sind unsere robusten Laptops standardmäßig mit mindestens einer RS232 Schnittstelle ausgestattet.<br>
+          Zubehör gefällig? Wir bieten das passende Zubehör, das Sie für Ihren Arbeitsalltag brauchen. Egal ob Barcode-Scanner oder Expresscard 54, wir stellen es nach Ihren Wünschen und Bedürfnissen zusammen.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- 1 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/car_dealer.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10">
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Werkstatt</h2>
+          </div>
+          <a class="z-10 inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/werkstatt">Mehr</a>
+        </div>
+        <!-- 2 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/industry.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10">
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Industrie</h2>
+          </div>
+          <a class="inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/industrie">Mehr</a>
+        </div>
+        <!-- 3 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/police.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10">  
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Öffentliche Sicherheit</h2>
+          </div>
+          <a class="inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/sicherheit">Mehr</a>
+        </div>
+        <!-- 4 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/construction.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10"> 
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Bau</h2>
+          </div>
+          <a class="inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/bau">Mehr</a>
+        </div>
+        <!-- 5 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/logistic.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10"> 
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Logistik</h2>
+          </div>
+          <a class="inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/logistik">Mehr</a>
+        </div>
+        <!-- 6 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/agrar.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10"> 
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Forst und Land</h2>
+          </div>
+          <a class="inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/landwirtschaft">Mehr</a>
+        </div>
+        <!-- 7 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/soldiers.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10"> 
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Militär</h2>
+          </div>
+          <a class="inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/militaer">Mehr</a>
+        </div>
+        <!-- 8 -->
+        <div data-makevisible="1" class="p-4 mb-8 bg-cover bg-center relative rounded-xl flex flex-col items-center justify-center text-center overflow-hidden">
+          <img src="assets/images/branchBanner/transport.webp" alt="Image" class="-z-10 absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy">
+          <div class="bg-gradient"></div>
+          <div class="flex justify-center items-center h-28 z-10"> 
+            <h2 class="text-3xl mb-2 leading-tight font-bold font-heading text-white">Transport</h2>
+          </div>
+          <a class="inline-block px-8 py-2 border border-gray-300 hover:border-blue-500 rounded-full mt-2 mb-3 text-white" href="/branchen/transport">Mehr</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- PRODUCTS IMAGES -->
+    <section class="relative bg-gray-800 py-20 2xl:py-40 overflow-hidden">
+      <div class="relative max-w-4xl px-4 lg:px-0 mx-auto py-10">
+          <div class="max-w-xl mb-14 lg:mb-28">
+            <h2 class="mt-8 ml-6 text-5xl text-white font-bold font-heading">Technologie einfach und robust</h2>
+          </div>
+          <div class="relative" x-data="{ currentImage: 0, images: ['/assets/images/L_Z14I/Expansion-Box-PCI-Express-2-slots.webp', '/assets/images/T_R11/R11-with-Folio-Case-Hi-Cap-Battery_1-01.webp', '/assets/images/T_U11l/KB-X11G3-2.webp'], alts: ['Alt Image 1', 'Alt Image 2', 'Alt Image 3'] }">
+              <!-- Slides -->
+              <template x-for="(image, index) in images" :key="index">
+                  <div x-show="currentImage === index" class="relative max-w-4xl mx-auto">
+                      <img class="w-full mb-12 object-cover" :src="image" :alt="alts[index]">
+                  </div>
+              </template>
+
+              <!-- Prev/Next Arrows -->
+              <div class="flex flex-wrap -mx-5">
+                  <div class="w-auto mx-auto lg:w-1/5 px-5">
+                      <button class="inline-flex mr-2 items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full carousel-button" x-on:click="currentImage = currentImage === 0 ? images.length - 1 : currentImage - 1">
+                          <svg class="w-4 h-4" width="7" height="13" viewbox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.84708 12.1077C7.05097 12.3133 7.05097 12.6436 6.84708 12.8476C6.64319 13.0517 6.31377 13.0525 6.10988 12.8476L0.152917 6.8708C-0.0509739 6.66673 -0.0509738 6.33645 0.152917 6.13087L6.10988 0.154027C6.31377 -0.0500387 6.64319 -0.0500386 6.84708 0.154027C7.05098 0.358848 7.05098 0.689887 6.84708 0.893952L1.4143 6.50121L6.84708 12.1077Z" fill="white"></path>
+                          </svg>
+                      </button>
+                      <button class="inline-flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full carousel-button" x-on:click="currentImage = currentImage === images.length - 1 ? 0 : currentImage + 1">
+                          <svg class="w-4 h-4" width="7" height="13" viewbox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.152917 0.894235C-0.0509742 0.688658 -0.0509742 0.358375 0.152917 0.15431C0.356808 -0.0497557 0.686228 -0.0505119 0.89012 0.15431L6.84708 6.13116C7.05097 6.33522 7.05097 6.6655 6.84708 6.87108L0.890119 12.8479C0.686227 13.052 0.356807 13.052 0.152916 12.8479C-0.0509753 12.6431 -0.0509753 12.3121 0.152916 12.108L5.5857 6.50074L0.152917 0.894235Z" fill="white"></path>
+                          </svg>
+                      </button>
+                  </div>
+              </div>
+
+              <!-- Navigation Buttons -->
+              <div class="absolute w-full flex items-center justify-center px-4 mt-4">
+                  <template x-for="(image, index) in images" :key="index">
+                      <button class="flex-1 w-4 h-2 mx-2 mb-0 mt-8 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-teal-600 hover:shadow-lg" :class="{ 
+                              'bg-blue-500': currentImage === index,
+                              'bg-white': currentImage !== index 
+                          }" x-on:click="currentImage = index"></button>
+                  </template>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!-- PERCENTAGES -->
+  <section class="py-20 2xl:py-40 bg-gray-800">
+    <div class="container px-20 mx-auto">
+      <div>
+        <div class="flex flex-wrap -mx-6 lg:-mx-14">
+          <div class="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14 mb-16">
+            <p class="mb-6 text-6xl text-center font-bold font-heading text-white">
+              <span>&gt; </span>
+              <span class="count" data-target="6">0</span>
+              <span class="text-3xl">Jahre</span>
+            </p>
+            <div class="py-px mb-12 bg-gray-500"></div>
+            <h3 class="mt-12 mb-4 text-lg font-bold font-heading text-white">Nachhaltig</h3>
+            <p class="text-lg font-thin text-gray-200">Nachhaltigkeit fördern durch eine deutlich längere Lebensdauer im Vergleich zu normalen Laptops und Tablets.</p>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14 mb-16">
+            <p class="mb-6 text-6xl text-center font-bold font-heading text-white">
+              <span>- </span>
+              <span class="count" data-target="50">0</span>
+              <span class="text-3xl">%</span>
+            </p>
+            <div class="py-px mb-12 bg-gray-500"></div>
+            <h3 class="mt-12 mb-4 text-lg font-bold font-heading text-white">Wartung</h3>
+            <p class="text-lg font-thin text-gray-200">Sparen Sie Kosten und Zeit durch weniger Wartung.</p>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14 mb-16">
+            <p class="mb-6 text-6xl text-center font-bold font-heading text-white">
+              <span class="count" data-target="100">0</span>
+              <span class="text-3xl">%</span>
+            </p>
+            <div class="py-px mb-12 bg-gray-500"></div>
+            <h3 class="mt-12 mb-4 text-lg font-bold font-heading text-white">Verlässlich</h3>
+            <p class="text-lg font-thin text-gray-200">Weniger Ausfälle sichern den Arbeitsalltag.</p>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-6 lg:px-14 mb-16">
+            <p class="mb-6 text-6xl text-center font-bold font-heading text-white">
+              <span class="count" data-target="100">0</span>
+              <span class="text-3xl">%</span>
+            </p>
+            <div class="py-px mb-12 bg-gray-500"></div>
+            <h3 class="mt-12 mb-4 text-lg font-bold font-heading text-white">Schutz</h3>
+            <p class="text-lg font-thin text-gray-200">Auch in rauhen Umgebungen sind Ihre Daten stets geschützt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const counters = document.querySelectorAll('.count');
+      const speed = 3000; // Geschwindigkeit der Animation
+
+      const isElementInViewport = (el) => {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      };
+
+      const updateCount = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(() => updateCount(counter), 5);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      const checkCounters = () => {
+        counters.forEach(counter => {
+          if (isElementInViewport(counter) && !counter.classList.contains('counted')) {
+            counter.classList.add('counted');
+            updateCount(counter);
+          }
+        });
+      };
+
+      window.addEventListener('scroll', checkCounters);
+      window.addEventListener('resize', checkCounters);
+      checkCounters(); // Initial check in case elements are already in viewport
+    });
+  </script>
+
+<!-- TABLETS/LAPTOPS -->
+<section id="uebersicht" class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden bs-section-dragged">
+    <h1 class="text-5xl text-center leading-tight font-bold font-heading text-white mb-8">Tablets</h1>
+    <div class="relative container px-4 md:px-8 lg:px-32 mx-auto">
+      <div>
+        <div class="flex flex-wrap -m-5">
+          <div class="w-full px-1 mx-4 md:mx-0 md:px-2 lg:w-1/4 mb-6">
+            <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+              <div class="flex justify-center items-center h-48">
+              <img class="rounded-lg text-center w-64" src="/assets/images/T_R11L/A-01.webp" alt="Durabook R11L" loading="lazy">
+              </div>
+              <h3 class="text-3xl mb-4 mt-4 leading-tight font-bold font-heading text-white text-center">Durabook R11L</h3>
+              <div class="h-64">
+                <ul class="text-lg font-thin text-gray-200 leading-loose mb-4">
+                  
+              <li>· 11,6 Zoll Full HD Touchscreen</li>
+            
+              <li>· IP65 und MIL-STD-810G</li>
+            
+              <li>· Intel® Pentium® 4417U</li>
+            
+              <li>· 4 GB DDR4 RAM</li>
+            
+              <li>· 128 GB SSD</li>
+            
+              <li>· 8 Stunden Akkulaufzeit</li>
+            
+                </ul>
+              </div>
+              <div class="text-center mt-4"><a class="inline-block px-6 py-3 border border-gray-300 hover:border-blue-500 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-r11l">Mehr erfahren</a></div>
+            </div>
+          </div>
+          <div class="w-full px-1 mx-4 md:mx-0 md:px-2 lg:w-1/4 mb-6">
+            <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+              <div class="flex justify-center items-center h-48">
+              <img class="rounded-lg text-center w-64" src="/assets/images/T_R11/front.webp" alt="Durabook R11" loading="lazy">
+              </div>
+              <h3 class="text-3xl mb-4 mt-4 leading-tight font-bold font-heading text-white text-center">Durabook R11</h3>
+              <div class="h-64">
+                <ul class="text-lg font-thin text-gray-200 leading-loose mb-4">
+                  
+              <li>· 11,6 Zoll Full HD Touchscreen</li>
+            
+              <li>· IP66 und MIL-STD-810H</li>
+            
+              <li>· Intel® Core™ i5-1235U</li>
+            
+              <li>· 8 - 32 GB DDR5 RAM</li>
+            
+              <li>· 256 GB - 1 TB PCIe SSD</li>
+            
+              <li>· 8,5 Stunden Akkulaufzeit</li>
+            
+                </ul>
+              </div>
+              <div class="text-center mt-4"><a class="inline-block px-6 py-3 border border-gray-300 hover:border-blue-500 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-r11">Mehr erfahren</a></div>
+            </div>
+          </div>
+          <div class="w-full px-1 mx-4 md:mx-0 md:px-2 lg:w-1/4 mb-6">
+            <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+              <div class="flex justify-center items-center h-48">
+              <img class="rounded-lg text-center w-64" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Durabook U11I" loading="lazy">
+              </div>
+              <h3 class="text-3xl mb-4 mt-4 leading-tight font-bold font-heading text-white text-center">Durabook U11I</h3>
+              <div class="h-64">
+                <ul class="text-lg font-thin text-gray-200 leading-loose mb-4">
+                  
+              <li>· 11,6 Zoll Full HD Touchscreen</li>
+            
+              <li>· IP65 und MIL-STD-810G</li>
+            
+              <li>· Intel® Core™ i5-1230U</li>
+            
+              <li>· 8 GB DDR4 RAM</li>
+            
+              <li>· 256 GB PCIe SSD</li>
+            
+              <li>· 10 Stunden Akkulaufzeit</li>
+            
+                </ul>
+              </div>
+              <div class="text-center mt-4"><a class="inline-block px-6 py-3 border border-gray-300 hover:border-blue-500 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-u11i">Mehr erfahren</a></div>
+            </div>
+          </div>
+          <div class="w-full px-1 mx-4 md:mx-0 md:px-2 lg:w-1/4 mb-6">
+            <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+              <div class="flex justify-center items-center h-48">
+              <img class="rounded-lg text-center w-64" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Durabook R8" loading="lazy">
+              </div>
+              <h3 class="text-3xl mb-4 mt-4 leading-tight font-bold font-heading text-white text-center">Durabook R8</h3>
+              <div class="h-64">
+                <ul class="text-lg font-thin text-gray-200 leading-loose mb-4">
+                  
+              <li>· 8 Zoll Full HD mit Touchscreen</li>
+            
+              <li>· IP66 und MIL-STD-810H</li>
+            
+              <li>· Intel® Core™ i5-1230U</li>
+            
+              <li>· 8 - 16 GB DDR4 RAM</li>
+            
+              <li>· 128 GB - 1 TB SSD</li>
+            
+              <li>· 8,5 Stunden Akkulaufzeit</li>
+            
+                </ul>
+              </div>
+              <div class="text-center mt-4"><a class="inline-block px-6 py-3 border border-gray-300 hover:border-blue-500 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-r8">Mehr erfahren</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden bs-section-dragged">
+    <h1 class="text-5xl text-center leading-tight font-bold font-heading text-white mb-8">Laptops</h1>
+    <div class="relative container px-4 md:px-8 lg:px-32 mx-auto">
+      <div>
+        <div class="flex flex-wrap -m-5">
+          <div class="w-full px-1 mx-4 md:mx-0 md:px-2 lg:w-1/3 mb-6">
+            <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+              <div class="flex justify-center items-center h-48">
+              <img class="rounded-lg h-36 text-center" src="/assets/images/L_S15/front.webp" alt="Durabook S15" loading="lazy">
+            </div>
+              <h3 class="text-3xl mb-4 mt-4 leading-tight font-bold font-heading text-white text-center">Durabook S15</h3>
+              <div class="h-64">
+                <ul class="text-lg font-thin text-gray-200 leading-loose ml-12 mb-4">
+                  
+              <li>· 15,6 Zoll Full HD</li>
+            
+              <li>· IP5X und MIL-STD-810G</li>
+            
+              <li>· Intel® Core™ i5-1235U</li>
+            
+              <li>· 8 GB DDR5 RAM</li>
+            
+              <li>· 256 GB PCIe SSD</li>
+            
+              <li>· 12 Stunden Akkulaufzeit</li>
+            
+                </ul>
+              </div>
+              <div class="text-center mt-4"><a class="inline-block mt-8 px-6 py-3 border border-gray-300 hover:border-blue-500 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-s15">Mehr erfahren</a></div>
+            </div>
+          </div>
+          <div class="w-full px-1 mx-4 md:mx-0 md:px-2 lg:w-1/3 mb-6">
+            <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+              <div class="flex justify-center items-center h-48">
+              <img class="rounded-lg h-36 text-center" src="/assets/images/L_S14I/S14I-opened-front-win-11.webp" alt="Durabook S14I" loading="lazy">
+            </div>
+              <h3 class="text-3xl mb-4 mt-4 leading-tight font-bold font-heading text-white text-center">Durabook S14I</h3>
+              <div class="h-64">
+                <ul class="text-lg font-thin text-gray-200 leading-loose ml-12 mb-4">
+                  
+              <li>· 14 Zoll Full HD</li>
+            
+              <li>· IP53 und MIL-STD-810G</li>
+            
+              <li>· Intel® Core™ i5-1135G7</li>
+            
+              <li>· 8 - 64 GB DDR4 RAM</li>
+            
+              <li>· 256 GB - 1 TB PCIe SSD</li>
+            
+              <li>· 10 Stunden Akkulaufzeit</li>
+            
+                </ul>
+              </div>
+              <div class="text-center mt-4"><a class="inline-block mt-8 px-6 py-3 border border-gray-300 hover:border-blue-500 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-s14i">Mehr erfahren</a></div>
+            </div>
+          </div>
+          <div class="w-full px-1 mx-4 md:mx-0 md:px-2 lg:w-1/3 mb-6">
+            <div class="p-6 md:p-10 bg-gray-500 rounded-lg">
+              <div class="flex justify-center items-center h-48">
+              <img class="rounded-lg h-36 text-center" src="/assets/images/L_S14I/S14I-opened-front-win-11.webp" alt="Durabook Z14I" loading="lazy">
+            </div>
+              <h3 class="text-3xl mb-4 mt-4 leading-tight font-bold font-heading text-white text-center">Durabook Z14I</h3>
+              <div class="h-64">
+                <ul class="text-lg font-thin text-gray-200 leading-loose ml-12 mb-4">
+                  
+              <li>· 14 Zoll Full HD</li>
+            
+              <li>· IP65 und MIL-STD-810G</li>
+            
+              <li>· Intel® Core™ i5-1135G7</li>
+            
+              <li>· 8 - 64 GB DDR4 RAM</li>
+            
+              <li>· 256 GB SSD</li>
+            
+              <li>· 12,5 Stunden Akkulaufzeit</li>
+            
+                </ul>
+              </div>
+              <div class="text-center mt-4"><a class="inline-block mt-8 px-6 py-3 border border-gray-300 hover:border-blue-500 rounded-full font-bold text-white whitespace-nowrap" href="/produkte/durabook-z14i">Mehr erfahren</a></div>
+            </div>
+          </div>
+              
+          </div>
+        </div>
+      </div>
+    
+  </section>
+
+<!-- FEATURES TABLE Laptops/Tablets -->
+<section class="relative py-20 2xl:py-40 bg-gray-800">
+  <div class="container px-4 pb-20 mx-auto border-b border-gray-500">
+    <div class="mb-14 text-center">
+      <h2 class="mt-8 text-5xl font-bold font-heading text-white">Laptop Vergleich</h2>
+    </div>
+    <div class="pt-20 border-t border-gray-500 overflow-x-auto overflow-y-hidden">
+      <table class="table-auto w-full mb-10">
+        <thead>
+          <tr class="text-md md:text-lg text-white text-left font-bold">
+<th class="pb-6"></th>
+<th class="pb-6 pr-8 text-white">Durabook S15</th>
+<th class="pb-6 pr-8 text-white">Durabook S14I</th>
+<th class="pb-6 pr-8 text-white">Durabook Z14I</th>
+</tr>
+        </thead>
+        <tbody>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">IP Schutz</td>
+            <td>IP5X</td>
+            <td>IP53</td>
+            <td>IP65</td>
+            
+          </tr>
+          <tr class="text-md md:text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Gewicht</td>
+            <td>2,6 kg</td>
+            <td>2,3 kg</td>
+            <td>3,6 kg</td>
+           
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Hauptakku Laufzeit</td>
+            <td>12 Stunden</td>
+            <td>10 Stunden</td>
+            <td>12,5 Stunden</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Touchscreen</td>
+            <td>
+              <svg width="16" height="2" viewbox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="1.35" x2="16" y2="1.35" stroke="gray" stroke-width="1.3"></line></svg>
+            </td>
+            <td>
+              optional
+            </td>
+            <td>
+              <svg width="20" height="16" viewbox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="gray"></path>
+              </svg>
+            </td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Displaygröße</td>
+            <td>15,6 Zoll</td>
+            <td>14,0 Zoll</td>
+            <td>14,0 Zoll</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Arbeitsspeicher</td>
+            <td>8 - 32GB 4800MHz DDR5</td>
+            <td>8 - 64GB 3200MHz DDR4</td>
+            <td>8 - 64GB 3200MHz DDR4</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="relative py-20 2xl:py-8 bg-gray-800">
+  <div class="container px-4 pb-20 mx-auto">
+    <div class="mb-14 text-center">
+      <h2 class="mt-8 text-5xl font-bold font-heading text-white">Tablet Vergleich</h2>
+    </div>
+    <div class="pt-20 border-t border-gray-500 overflow-x-auto overflow-y-hidden">
+      <table class="table-auto w-full mb-10">
+        <thead>
+          <tr class="text-md md:text-lg text-white text-left font-bold">
+<th class="pb-6"></th>
+<th class="pb-6 pr-8 text-white">R11L</th>
+<th class="pb-6 pr-8 text-white">R11</th>
+<th class="pb-6 pr-8 text-white">U11I</th>
+<th class="pb-6 pr-8 text-white">R8</th>
+</tr>
+        </thead>
+        <tbody>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Fallschutz</td>
+            <td>IP65</td>
+            <td>IP66</td>
+            <td>IP66</td>
+            <td>IP66</td>
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Gewicht</td>
+            <td>1,2 kg</td>
+            <td>1,2 kg</td>
+            <td>1,4 kg</td>
+            <td>0,86 kg</td>
+           
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Hauptakku Laufzeit</td>
+            <td>8 Stunden</td>
+            <td>8,5 Stunden</td>
+            <td>10 Stunden</td>
+            <td>8,5 Stunden</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Touchscreen Handschuhe</td>
+            <td>
+              <svg width="16" height="2" viewbox="0 0 16 2" fill="white" xmlns="http://www.w3.org/2000/svg"><line y1="1.35" x2="16" y2="1.35" stroke="gray" stroke-width="1.3"></line></svg>
+            </td>
+            <td>
+              <svg width="16" height="2" viewbox="0 0 16 2" fill="white" xmlns="http://www.w3.org/2000/svg"><line y1="1.35" x2="16" y2="1.35" stroke="gray" stroke-width="1.3"></line></svg>
+            </td>
+            <td>
+              <svg width="20" height="16" viewbox="0 0 20 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="gray"></path>
+              </svg>
+            </td>
+            <td>
+              <svg width="20" height="16" viewbox="0 0 20 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.81671 15.0418L0 8.2251L0.90027 7.32483L6.81671 13.2413L19.0997 0.958252L20 1.85852L6.81671 15.0418Z" fill="gray"></path>
+              </svg>
+            </td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200 bg-gray-700">
+            <td class="py-5 pl-10 font-bold text-left text-white">Displaygröße</td>
+            <td>11,6 Zoll</td>
+            <td>11,6 Zoll</td>
+            <td>11,6 Zoll</td>
+            <td>8 Zoll</td>
+            
+          </tr>
+          <tr class="text-md md:text-xl font-thin text-gray-200">
+            <td class="py-5 pl-10 font-bold text-left text-white">Arbeitsspeicher</td>
+            <td>4GB 2133MHz DDR4</td>
+            <td>8 - 32GB 4800MHz DDR5</td>
+            <td>8 - 16GB 24000 MHz DDR4</td>
+            <td>8 - 16GB 24000 MHz DDR4</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+    <div class="text-center mx-auto mt-20">
+      <a class="inline-block mb-4 sm:mb-0 sm:mr-4 py-5 px-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="/kontakt">Jetzt beraten lassen</a>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- testimonials -->
+  <section class="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
+    <div class="relative container px-4 mx-auto">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-20 lg:mb-32">
+          <h2 class="mt-12 text-5xl font-bold font-heading text-white">Das sagen unsere Kunden</h2>
+        </div>
+        <div class="relative flex flex-wrap -mx-5 mb-20">
+          <div class="w-full lg:w-1/2 px-5 mb-12 lg:mb-0">
+            <div class="flex -mx-4 lg:mx-0">
+              <div class="w-1/3 px-4">
+                <img class="w-25 h-25 mx-auto rounded-full object-cover mt-8" src="/assets/images/branchen_testi/architekt.webp" alt="" loading="lazy">
+              </div>
+              <div class="w-2/3 px-4">
+                <div class="relative inline-block mb-8 p-10 bg-gray-500 rounded-lg">
+                  <div class="absolute top-0 left-0 -ml-5 mt-10 w-14 h-14 bg-gray-500" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></div>
+                  <p class="mb-8 text-lg font-thin text-gray-200">Auf der Baustelle sind unsere Geräte oft Staub und Erschütterungen ausgesetzt. Die Laptops von RobustBook waren zum Glück eine gute Wahl für diese Bedingungen.</p>
+                  <h3 class="mb-1 text-2xl text-white font-bold">Michael Fischer</h3>
+                  <p class="text-white">Tiefbau Weber GmbH</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 px-5">
+            <div class="flex -mx-4 lg:mx-0">
+              <div class="w-1/3 px-4">
+                <img class="w-25 h-25 mx-auto rounded-full object-cover object-top mt-8" src="/assets/images/branchen_testi/engineer.webp" alt="" loading="lazy">
+              </div>
+              <div class="w-2/3 px-4">
+                <div class="relative inline-block mb-8 p-10 bg-gray-500 rounded-lg">
+                  <div class="absolute top-0 left-0 -ml-5 mt-10 w-14 h-14 bg-gray-500" style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></div>
+                  <p class="mb-8 text-lg font-thin text-gray-200">Es gibt kaum noch Notebooks mit serieller Schnittstelle auf dem Markt. RobustBook jedoch bietet moderne, leistungsfähige Geräte mit RS232 Schnittstelle an.</p>
+                  <h3 class="mb-1 text-2xl text-white font-bold">Leon Schäfer</h3>
+                  <p class="text-white">KUKU Maschinenbau GmbH</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+<!-- Partners -->
+<section class="relative py-10 2xl:py-20 bg-gray-800 overflow-hidden bs-section-dragged">
+  <h2 class="text-4xl leading-tight font-bold font-heading text-white text-center mb-10">Unsere Partner</h2>
+  <div class="relative container mx-auto px-4 custom-padding">
+    <div>
+      <div class="flex flex-wrap  custom-margin">
+        <div class="relative w-full lg:w-1/2 custom-card-padding mb-10 lg:mb-10">
+          <div class="bg-gray-500 rounded-lg p-8">
+            <div class="flex justify-center items-center h-20 mb-8">
+              <img class="rounded-lg w-72" src="assets/images/logo/DURABOOK-LOGO.webp" alt="Durabook Logo" loading="lazy">
+            </div>
+            <div class="h-auto">
+              <p class="text-xl font-thin text-gray-200">DURABOOK ist die Hauptmarke von Twinhead International Corporation. Bereits im Jahr 2000 entwickelte das Unternehmen den ersten robusten Laptop, der militärischen Standards entsprach. Zwei Jahre später, im Jahr 2002, wurde die Marke DURABOOK offiziell eingeführt. Seitdem hat sich die Produktlinie von DURABOOK kontinuierlich weiterentwickelt und bietet heute eine breite Palette von mobilen Lösungen, die speziell auf die Bedürfnisse verschiedener Märkte zugeschnitten sind, in denen Robustheit und Mobilität entscheidend sind.</p>
+            </div>
+            <div class="text-center mt-2">
+              <a class="inline-block py-5 px-12 mt-16 text-white font-bold border border-gray-300 hover:border-blue-500 rounded-full" href="https://durabook.com/de/" target="_blank">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
+        <div class="relative w-full lg:w-1/2 custom-card-padding mb-10 lg:mb-10">
+          <div class="bg-gray-500 rounded-lg p-8 h-full">
+            <div class="flex justify-center items-center h-20 mb-8">
+              <img class="rounded-lg w-72" src="assets/images/logo/Logo-mit-schrift.webp" alt="Bitblade Logo" loading="lazy">
+            </div>
+            <div class="h-auto">
+              <p class="text-xl font-thin text-gray-200">Dank unserer Erfahrung in Online-Marketing, Webdesign, Webentwicklung und Vertrieb können wir schnell neue Projekte realisieren und so neue Geschäftsmodelle entwickeln. Aus diesem Grund haben wir innovative Projekte entwickelt, die weit über herkömmliche Dienstleistungen hinausgehen und neue Maßstäbe setzen. </p>
+            </div>
+            <div class="text-center mt-6">
+              <a class="inline-block py-5 px-12 mt-32 text-white font-bold border border-gray-300 hover:border-blue-500 rounded-full" href="https://bitblade.io/de" target="_blank">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 custom-card-padding mb-10 lg:mb-20"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ'S -->
+  <section class="relative pb-20 2xl:py-20 bg-gray-800 overflow-hidden">
+    <div class="relative w-full lg:flex lg:justify-between lg:items-start lg:pl-24 px-4 pt-20">
+        <div class="w-full lg:w-2/3 sm:mr-0 lg:mr-4">
+            <div class="mb-20">
+                <h2 class="text-5xl md:text-7xl text-white text-center font-bold font-heading">FAQ's</h2>
+            </div>
+            <div class="w-full md:max-w-4xl mx-auto">
+                <details class="mb-4 px-0 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+                    <summary class="flex w-full text-left cursor-pointer">
+                        <div class="w-auto mr-8 -ml-4">
+                            <span class="flex ml-8 md:ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">1</span>
+                        </div>
+                        <div class="w-full mt-3">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-bold text-white">Was sind Outdoor Laptops und Outdoor Tablets?</h3>
+                                <span class="ml-4 mr-4 md:mr-0">
+                                    <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="mt-6 border-l-2 border-gray-500 pl-2">
+                        <p class="mb-5 text-xl font-thin text-gray-200">Outdoor Laptops und Outdoor Tablets sind Laptops / Tablets, welche speziell für den Gebrauch im Freien und unter extremen Wetterbedingungen konstruiert wurden. Sie sind stoßfest, wasserdicht, staubdicht und sind somit resistent gegen Regen, Schnee, Stöße und Schmutz.</p>
+                    </div>
+                </details>
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">2</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Was sind die Vorteile von Outdoor Laptops / Outdoor Tablets?
+                </h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Durch ihre robuste Bauweise sind sie besonders widerstandsfähig und daher außerordentlich langlebig. Zusätzlich haben sie eine lange Akkulaufzeit, einen hellen Bildschirm sowie eine ergonomische Tastatur.</p>
+          </div>
+        </details>
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">3</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Welche Betriebssysteme sind verfügbar?
+                </h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Unsere robusten Geräte können mit verschiedenen Betriebssystemen wie Windows und Linux genutzt werden. Die Auswahl des Betriebssystems hängt von den spezifischen Anforderungen ihres Unternehmens ab.</p>
+          </div>
+        </details>
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">4</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Kann ich die Geräte auch für meine normalen Büroarbeiten verwenden?
+                </h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Ja, sie funktionieren wie ganz normale Laptops und können dementsprechend auch für alle normalen Bürotätigkeiten genutzt werden.</p>
+          </div>
+        </details>
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">5</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Sind Outdoor Laptops / Outdoor Tablets schwer?</h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Im Allgemeinen sind unsere Laptops / Tablets aufgrund ihrer robusten Konstruktion und der verwendeten Materialien schwerer als übliche Laptops und Tablets. So kann das Gewicht je nach Modell variieren.</p>
+          </div>
+        </details>
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">6</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Sind Reparaturen an den Laptops / Tablets sehr aufwendig?
+                </h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Nein, im Gegenteil. Durch die robuste Bauweise sind Sie weniger wartungsanfällig und sparen daher Kosten und Zeit. Reparaturen sollten jedoch nur von zertifizierten Servicecentern durchgeführt werden.</p>
+          </div>
+        </details>
+        
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">7</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Gibt es Garantie- und Supportoptionen?
+                </h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Outdoor Laptops und Outdoor Tablets werden oft mit längeren Garantiezeiten und einem umfangreicheren Supportangebot angeboten im Vergleich zu Standardgeräten. Durabook bietet hier spezielle Garantie- und Supportpakete an, um den hohen Anforderungen gerecht zu werden.</p>
+          </div>
+        </details>
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">8</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Was gilt es zu beachten, wenn ich einen Outdoor Laptop / Outdoor Tablet kaufen möchte?
+                </h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Beim Kauf eines Outdoor Laptops / Outdoor Tablets sollte auf die Robustheit, die Langlebigkeit, die Leistungsfähigkeit, die Energieeffizienz und das ergonomische Design geachtet werden. Ihre individuellen Wünsche und Bedürfnisse sind hierfür maßgebend.</p>
+          </div>
+        </details>
+        <details class="mb-4 px-4 lg:px-12 py-8 bg-gray-500 rounded-2xl">
+          <summary class="flex w-full text-left cursor-pointer">
+            <div class="w-auto mr-8 -ml-4">
+              <span class="flex ml-4 items-center justify-center w-12 h-12 text-lg text-white font-bold bg-blue-500 rounded-full">9</span>
+            </div>
+            <div class="w-full mt-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-white">Warum sollte ich mich für ein Durabook Outdoor Laptop / Outdoor Tablet entscheiden?
+                </h3>
+                <span class="ml-4">
+                  <svg class="w-4 h-4" width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.18267 9.00018C0.910673 9.26818 0.473672 9.26818 0.203672 9.00018C-0.0663284 8.73218 -0.0673279 8.29918 0.203672 8.03118L8.11167 0.201183C8.38167 -0.0668173 8.81867 -0.0668173 9.09067 0.201183L16.9987 8.03118C17.2687 8.29918 17.2687 8.73218 16.9987 9.00018C16.7277 9.26818 16.2897 9.26818 16.0197 9.00018L8.60067 1.85918L1.18267 9.00018Z" fill="#1F40FF"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </summary>
+          <div class="mt-6 border-l-2 border-gray-500 pl-2">
+            <p class="mb-5 text-xl font-thin text-gray-200">Durabook bringt mehr als 20 Jahre Branchenerfahrung mit und hat mit seinen strapazierfähigen und langlebigen Laptops / Tablets einen Maßstab gesetzt. Die Geräte sind robust, technisch auf dem neuesten Stand und bieten durch Durabook einen ausgezeichneten Kundenservice. Wenn Sie einen zuverlässigen und vorallem resistenten Laptop suchen, der auch in schwierigen Umgebungen performt, ist ein Durabook genau das richtige für Sie.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="hidden lg:block lg:w-1/3  lg:mt-24 lg:sticky lg:top-24 lg:right-0">
+      <span class="block lg:block lg:absolute lg:top-24 lg:right-0 h-auto lg:w-full rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewbox="0 0 24 24"><g fill="none" stroke="#1f40fe" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="M12 11.338a.66.66 0 1 0 0-1.321a.66.66 0 0 0 0 1.321m4.625 0a.66.66 0 1 0 0-1.321a.66.66 0 0 0 0 1.321m-9.25 0a.66.66 0 1 0 0-1.321a.66.66 0 0 0 0 1.321"></path><path stroke-linejoin="round" d="M21.25 10.94v3.17a4 4 0 0 1-1.16 2.81a4.16 4.16 0 0 1-1.29.86a4.11 4.11 0 0 1-1.51.3h-2.65l-2.18 2.18a.8.8 0 0 1-.21.15a.65.65 0 0 1-.5 0a.8.8 0 0 1-.21-.15l-2.18-2.18H6.71a4 4 0 0 1-2.8-1.16a4 4 0 0 1-1.16-2.81v-6.6a4 4 0 0 1 4-4H13"></path><path stroke-miterlimit="10" d="M17.614 3.45a1.2 1.2 0 0 1 1.306-.68a1.163 1.163 0 0 1 .853.607a1.01 1.01 0 0 1-.588 1.389a.745.745 0 0 0-.48.673v.277"></path><path stroke-linejoin="round" d="M18.74 7.896h.002"></path></g></svg>
+      </span>
+  </div>
+</div>
+</section>
+
+
+
+          
+<!-- contact -->
+<section class="relative px-4 py-20 2xl:py-40 bg-gray-800 bs-section-dragged">
+  <div class="relative container px-4 mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="mt-10 text-5xl font-bold font-heading text-white">Kontaktieren Sie uns</h2>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap -mx-4 mb-20">
+        <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
+          <div class="bg-gray-500 rounded-lg">
+            <img class="h-64 w-full rounded-lg object-cover" src="https://image.freepik.com/free-photo/contacting-with-friends-via-computer_329181-14587.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="px-14 py-8 bg-gray-500 mt-4 rounded-lg">
+            <div class="mb-6 py-px bg-gray-500"></div>
+            <h3 class="mb-8 lg:mb-4 text-xl text-white font-bold text-center">Sie haben Fragen?</h3>
+            <div class="text-center"><a class="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white" href="/kontakt">Um Rückruf bitten</a></div>
+          </div>
+        </div>
+        <div class="w-auto lg:w-1/2">
+          <div class="py-6 px-4 mb-4 ml-0 lg:ml-4 bg-gray-500 rounded-lg ">
+            <div class="flex items-center">
+              <span class="flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
+                <svg class="w-4 h-4" width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.9347 13.3167C17.811 12.6058 17.2022 12.0401 16.4551 11.94L12.3077 11.3855C11.555 11.2832 10.8101 11.6825 10.4984 12.3528C10.4185 12.5237 10.3521 12.7014 10.2981 12.8848C9.13582 12.4 8.09277 11.7004 7.19375 10.8018C6.29473 9.90315 5.59374 8.86053 5.10992 7.6987C5.29332 7.64471 5.4711 7.57835 5.64213 7.4985C6.31274 7.18695 6.70993 6.44351 6.60866 5.69108L6.05394 1.54536C5.9538 0.797426 5.38784 0.188953 4.66434 0.0641091C4.40105 0.0202451 4.18164 0 3.97348 0C2.61201 0 1.32368 0.71982 0.612565 1.87716C-0.157059 3.13122 -0.0501675 4.73507 0.128736 5.9925C0.533802 8.84029 1.99766 11.7038 4.14451 13.8498C5.74002 15.4446 7.71246 16.6402 9.84693 17.306C10.9339 17.6457 12.2942 18 13.605 18C14.5851 18 15.537 17.802 16.3235 17.2498C17.3733 16.5109 18 15.3052 18 14.0196C18 13.8115 17.9797 13.5911 17.9347 13.3167Z" fill="white"></path>
+                </svg>
+              </span>
+              <p class="text-lg text-white">+49 (0) 69 271 470 985</p>
+            </div>
+          </div>
+          <div class="py-6 px-4 mb-8 ml-0 lg:ml-4 bg-gray-500 rounded-lg">
+            <div class="flex items-center">
+              <span class="flex items-center justify-center w-12 h-12 mr-8 bg-blue-500 rounded-lg">
+                <svg class="w-5 h-3" width="21" height="14" viewbox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.8109 0H2.1878C0.981688 0 0 0.980499 0 2.18676V11.8119C0 13.0182 0.981688 14 2.1878 14H18.8122C20.0183 14 21 13.0182 21 11.8119V2.18676C20.9987 0.980499 20.017 0 18.8109 0ZM19.2492 4.73317L11.716 8.67092C11.3393 8.86387 10.9193 8.96887 10.4993 8.96887C10.0794 8.96887 9.66858 8.86387 9.28273 8.67092L1.74945 4.73317V2.75511L10.0872 7.11288C10.3405 7.24414 10.6555 7.24414 10.9101 7.11288L19.2479 2.75511V4.73317H19.2492Z" fill="white"></path>
+                </svg>
+              </span>
+              <p class="text-lg text-white">kontakt@totalrugged.com</p>
+            </div>
+          </div>
+          <div class="py-6 px-2">
+            <p class="mb-2  mt-4 ml-0 lg:ml-4 font-thin text-xl text-gray-200">TotalRugged ist Ihr Partner wenn es um Beratung und Beschaffung robuster Tablets und Laptops geht.
+               <br><br>Als offizieller Durabook Partner stehen wir Ihnen jederzeit mit Rat und Tat zur Seite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+  </main>
+
+  <section class=" md:px-10 2xl:py-40 bg-black pt-20">
+  <div class="container mx-auto px-8 md:px-10">
+    <div class="flex flex-wrap -mx-2 md:-mx-4 pb-6 lg:pb-20 border-b border-gray-500">
+      <div class="w-full md:w-3/5">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Rechtliches</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/impressum">Impressum</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/AGB">AGB</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/datenschutz">Datenschutz</a></li>
+            </ul>
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white mt-6 md:mt-12">Unternehmen</h3>
+            <ul>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/ueber_uns">Über uns</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Tablets</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11">Durabook R11</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11l">Durabook R11L</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-u11i">Durabook U11I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r8">Durabook R8</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Laptops</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s15">Durabook S15</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s14i">Durabook S14I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-z14i">Durabook Z14I</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Branchen</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/werkstatt">Werkstatt</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/militaer">Militär</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/industrie">Industrie</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/autohaus">Autohaus</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/transport">Transport</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/logistik">Logistik</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/bau">Bau</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/oeffentliche-sicherheit">Öffentliche Sicherheit</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/landwirtschaft">Forst- und Landwirtschaft</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/outdoor">Outdoor</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+        <h3 class="mb-14 text-xl font-bold text-white">Newsletter</h3>
+        <p class="text-gray-300 mb-10">Abonnieren und alle neuen News direkt erfahren</p>
+        <form action="#">
+          <div class="max-w-sm mb-8 flex items-center bg-white text-black rounded-full">
+            <input class="pl-4 py-4 my-1 ml-1 rounded-full border-transparent placeholder-gray-200" type="email" placeholder="Email address">
+            <button class="ml-auto px-4 lg:px-6 py-4 mr-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Bestätigen</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="flex flex-wrap justify-between items-center pt-6 md:pt-10 mb-4 md:mb-8 lg:mb-0">
+      <div class="flex items-center">
+        <p class="text-sm text-white">
+          <span>Webdesign erstellt mit ❤
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</span></p>
+</div>
+</div>
+</div></section>
+</body>
+</html>

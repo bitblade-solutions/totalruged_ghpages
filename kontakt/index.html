@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/alpinejs.min.js"></script>
+
+  
+  
+  <title>Kontakt</title>
+
+</head>
+<body>
+<div x-data="{ showBanner: !localStorage.getItem('cookieConsentAccepted') }" x-show="showBanner" class="fixed bottom-0 left-0 mb-4 ml-4 mr-4 w-64 z-50">
+    <div class="bg-gray-500 rounded-lg shadow-lg p-4">
+        <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center">
+                <img src="https://www.svgrepo.com/show/401340/cookie.svg" alt="Cookie" class="h-6 w-6 mr-2" loading="lazy">
+                <span class="text-white font-bold text-sm">Cookie Richtlinien</span>
+            </div>
+            <button x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'false');" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                <svg class="h-4 w-4" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <p class="text-gray-200 text-sm pb-6">
+            Wir verwenden Cookies und andere Tracking-Technologien, um Ihr Surferlebnis auf unserer Website zu verbessern, um Ihnen personalisierte Inhalte und gezielte Werbung zu zeigen, um unseren Website-Verkehr zu analysieren und um zu verstehen, woher unsere Besucher kommen. 
+        </p>
+        <div class="flex flex-row"></div>
+        <button id="cookie-notice-accept" x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'true'); loadAdditionalScripts();" href="#" class="mt-4 bg-blue-500 hover:bg-blue-600 rounded transition duration-200 text-white font-bold py-2 px-4">
+            Akzeptieren
+        </button>
+        
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        loadAdditionalScripts();
+    });
+
+    function loadAdditionalScripts() {
+        if (localStorage.getItem('cookieConsentAccepted')) {
+            
+            //matomo
+        
+
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            _paq.push(['enableHeartBeatTimer', 5]);
+            (function() {
+                var u="//analytics.bitblade.de/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '5']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+
+
+
+            
+
+        }
+    }
+</script>
+
+
+  
+<nav class="bg-black">
+  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-4 text-gray-200">
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-phone-alt"></i> +49 (0) 69 271 470 985</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0 md:ml-4">
+      <span class="text-xs md:text-lg hover:text-white block md:inline"><i class="fas fa-envelope"></i> kontakt@totalrugged.com</span>
+    </div>
+    <div class="w-full md:w-auto text-center md:px-4 md:text-right">
+      <a href="/kontakt" class="block text-center px-8 py-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="flex justify-between items-center w-full p-4 ml-16 text-white">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-8" alt="Flowbite Logo" loading="lazy">
+    </a>
+  </div>
+
+  
+
+    
+    <!-- display items -->
+     <div class="w-full md:hidden mt-4 ml-4 justify-between items-center">
+<button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-left p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="mega-menu-full" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+            </svg>
+      </button>
+    </div>
+    <!-- items -->
+      <div id="mega-menu-full" class="items-center justify-start ml-8 font-medium hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="md:flex xs:flex-col md:flex-row  xs:p-4 md:p-0 mt-4 rounded-lg bg-black md:bg-transparent md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              <li>
+                <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Tablets<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                  <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent mb-4 md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Laptops<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Branchen<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                  </svg></button>
+              </li>
+              <li>
+                <a href="/ueber_uns" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Über uns</a>
+            </li>
+           
+            
+          </ul>
+       
+      </div>
+  
+
+
+<!-- dropdown 1 -->
+<div id="mega-menu-full-dropdown1" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap justify-between">
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r8/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Image Durabook R8" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R8</div>
+        </a> 
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11/A-01.webp" alt="Image Durabook R11" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-r11l/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_R11L/A-01.webp" alt="Image Durabook R11L" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook R11L</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/4">
+        <a href="/produkte/durabook-u11i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Image Durabook U11I" loading="lazy">  
+          <div class="font-semibold text-white text-center mt-2">Durabook U11I</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> 
+
+
+
+   <!-- dropdown 2 -->
+   <div id="mega-menu-full-dropdown2" class="hidden mt-1 shadow-sm bg-gray-600">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap justify-between">
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s15/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_S15/front.webp" alt="Image Durabook S15" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S15</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Image Durabook S14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook S14I</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-z14i" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+            <img class="w-40 mx-auto" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Image Durabook Z14I" loading="lazy">  
+            <div class="font-semibold text-white text-center mt-2">Durabook Z14I</div>
+          </a>
+        </li>
+        <!-- Falls weitere Elemente hinzufügt werden sollen -->
+      </ul>
+    </div>
+  </div>
+  
+
+<!-- dropdown 3 -->
+<div id="mega-menu-full-dropdown3" class="hidden mt-1 shadow-sm bg-gray-600">
+  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+    <ul class="flex flex-wrap">
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/werkstatt/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/workshop.webp" alt="Image Werkstatt" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Werkstatt</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/autohaus/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/car_dealer.webp" alt="Image Autohaus" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Autohaus</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/militaer/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/soldiers.webp" alt="Image Militär" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Militär</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/industrie" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/industry.webp" alt="Image Industrie" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Industrie</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/sicherheit/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/police.webp" alt="Image Sicherheit" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Öffentliche Sicherheit</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/transport/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/transport.webp" alt="Image Transport" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Transport</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/logistik/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/logistic.webp" alt="Image Logistik" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Logistik</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/bau/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/construction.webp" alt="Image Bau" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Bau</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/landwirtschaft/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/agrar.webp" alt="Image Landwirtschaft" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-6">Landwirtschaft</div>
+        </a>
+      </li>
+      <li class="w-1/2 lg:w-1/5 p-5 box-border">
+        <a href="/branchen/outdoor/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          <img class="w-40 mx-auto" src="/assets/images/branchBanner/outdoor.webp" alt="Image Outdoor" loading="lazy">  
+          <div class="font-semibold text-center text-white mt-2">Outdoor</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('[data-collapse-toggle]');
+      const dropdowns = document.querySelectorAll('.hidden.mt-1');
+  
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const targetDropdownId = this.getAttribute('data-collapse-toggle');
+          const targetDropdown = document.getElementById(targetDropdownId);
+  
+          dropdowns.forEach(dropdown => {
+            if (dropdown !== targetDropdown) {
+              dropdown.classList.add('hidden');
+            }
+          });
+  
+          targetDropdown.classList.toggle('hidden');
+        });
+      });
+    });
+  </script>
+  
+  <main>
+    <div class="bg-black text-white" x-data="{ message: 'I ❤️ Alpine' }">
+    <div class="container mx-auto px-4 py-10">
+        <form x-on:submit.prevent="sendMautic()" id="contact" class="mx-auto max-w-4xl">
+            <h2 class="max-w-2xl mt-10 mb-8 text-4xl 2xl:text-6xl text-white font-bold font-heading">Kontakt</h2>
+            <div class="mb-4">
+                <label for="subject" class="block">Betreff *</label>
+                <select if class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" name="subject" id="subject">
+                    <option value="quote">Unverbindliches Angebot anfordern</option>
+                    <option value="callback">Rückruf vereinbaren</option>
+                    <option value="productinfo">Produktinformationen anfragen</option>
+                    <option value="haendler">Händler werden</option>
+                    <option value="other">Sonstiges</option>
+                    </select>
+            </div>
+            <div id="device-group" class="mb-4">
+                <label for="device" class="block">Gerät *</label>
+                <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="device" name="device" required>
+                    <option value="none">Bitte auswählen</option>
+                    <option value="r8">Durabook R8 Tablet</option>
+                    <option value="r11">Durabook R11 Tablet</option>
+                    <option value="r11l">Durabook R11L Tablet</option>
+                    <option value="u11i">Durabook U11I Tablet</option>
+                    <option value="s15">Durabook S15 Laptop</option>
+                    <option value="s14i">Durabook S14I Laptop</option>
+                    <option value="z14i">Durabook Z14I Laptop</option>
+                </select>
+            </div>
+            <div id="amount-group" class="mb-4">
+                <label for="amount" class="block">Anzahl *</label>
+                <input type="number" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="amount" value="1" name="amount" min="1" required>
+            </div>
+            <div id="equipment" class="mb-4"></div>
+
+            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Persönliche Daten
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <div>
+                    <label for="salutation" class="block">Anrede *</label>
+                    <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="salutation" name="salutation" required>
+                        <option>Herr</option>
+                        <option>Frau</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="firstname" class="block">Vorname *</label>
+                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="firstname" name="firstname" required>
+                </div>
+                <div>
+                    <label for="surname" class="block">Nachname *</label>
+                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="surname" name="surname" required>
+                </div>
+            </div>
+
+            <div id="company-group" class="mb-4">
+                <label for="company" class="block">Firma *</label>
+                <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="company" name="company" required>
+            </div>
+
+            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Adresse</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="street" class="block">Straße *</label>
+                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="street" name="street" required>
+                </div>
+                <div>
+                    <label for="housenumber" class="block">Hausnummer *</label>
+                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="housenumber" name="housenumber" required>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="zipcode" class="block">Postleitzahl *</label>
+                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="zipcode" name="zipcode" required>
+                </div>
+                <div>
+                    <label for="city" class="block">Ort *</label>
+                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="city" name="city" required>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="country" class="block">Land *</label>
+                    <select class="form-select text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="country" name="country" required>
+                        <option value="germany">Deutschland</option>
+                        <option value="austria">Österreich</option>
+                        <option value="switzerland">Schweiz</option>
+                        <option value="belgium">Belgien</option>
+                        <option value="bulgaria">Bulgarien</option>
+                        <option value="croatia">Kroatien</option>
+                        <option value="cyprus">Zypern</option>
+                        <option value="czech-republic">Tschechien</option>
+                        <option value="denmark">Dänemark</option>
+                        <option value="estonia">Estland</option>
+                        <option value="finland">Finnland</option>
+                        <option value="france">Frankreich</option>
+                        <option value="greece">Griechenland</option>
+                        <option value="hungary">Ungarn</option>
+                        <option value="ireland">Irland</option>
+                        <option value="italy">Italien</option>
+                        <option value="latvia">Lettland</option>
+                        <option value="lithuania">Litauen</option>
+                        <option value="luxembourg">Luxemburg</option>
+                        <option value="malta">Malta</option>
+                        <option value="netherlands">Niederlande</option>
+                        <option value="poland">Polen</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="romania">Rumänien</option>
+                        <option value="slovakia">Slowakei</option>
+                        <option value="slovenia">Slowenien</option>
+                        <option value="spain">Spanien</option>
+                        <option value="sweden">Schweden</option>
+                    </select>
+                </div>
+                <div>
+                    <div id="vatidgroup"></div>
+                </div>
+            </div>
+
+            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Kontaktdaten</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="email" class="block">E-Mail Adresse *</label>
+                    <input type="email" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="email" name="email" autocomplete="off" required>
+                </div>
+                <div>
+                    <label for="phone" class="block">Telefonnummer *</label>
+                    <input type="tel" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="phone" name="phone" required>
+                </div>
+            </div>
+
+            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Sonstiges</h3>
+            <div id="note-group" class="mb-4">
+                <label for="note" class="block">Sonstige Anmerkungen</label>
+                <textarea class="form-textarea pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="note" rows="3" name="note" placeholder="Weiteres Zubehör benötigt? Interesse an Mietkauf oder Leasing?"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="referrer" class="block">Wie haben Sie über uns erfahren?</label>
+                <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="referrer" name="referrer" required>
+                    <option value="Sonstiges">Sonstiges</option>
+                    <option value="Google">Google</option>
+                    <option value="Bing">Bing</option>
+                    <option value="Linkedin">LinkedIn</option>
+                    <option value="Empfehlung">Empfehlung</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" class="form-checkbox" id="newsletter" name="newsletter" value="Ja">
+                <label class="inline-block ml-2 mt-2" for="newsletter">Jetzt kostenfrei Newsletter abonnieren und
+                    <b>gratis Versand</b>, nützliche Tipps, Angebote und Produktneuheiten erhalten.</label>
+            </div>
+            <div id="branch" class="invisible mb-4">
+                <div class="form-group">
+                    <label for="salutation">Branche</label>
+                    <select class="form-control" name="branch" required>
+                        <option value="7e31a85f50">Andere</option>
+                        <option value="9b78e6fbaa">Werkstatt</option>
+                        <option value="d0b8360f09">Militär</option>
+                        <option value="62a66b8380">Industrie</option>
+                        <option value="08d3006de1">Öffentliche Sicherheit</option>
+                        <option value="0e1f4a31e8">Transport</option>
+                        <option value="73f937bd58">Logistik</option>
+                        <option value="5a3d7cf380">Bau</option>
+                        <option value="9fb4b20d6c">Forst- und Landwirtschaft</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" class="form-checkbox" id="privacy" required>
+                <label class="inline-block ml-2" for="privacy">Ich akzeptiere <a target="_blank" href="/agb">AGB</a>
+                    und <a target="_blank" href="/datenschutz">Datenschutzerklärung</a> *</label>
+            </div>
+
+            <input type="hidden" name="site" value="$site">
+
+            <!-- Start Mautic Form -->
+
+
+
+
+
+
+
+
+            <div class="flex justify-center md:justify-start">
+                <button type="submit" class="flex flex-row content-center justify-center items-center  gap-2 px-8 py-4 text-lg mt-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">
+
+                    <span class="icon-[fa6-solid--paper-plane]"></span>
+
+                    <span>Absenden</span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<script>
+
+
+
+    function serializeData(obj) {
+        if ('string' == typeof obj) {
+            return obj;
+        }
+        return Object.keys(obj).map(function (key) {
+            return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+        }).join('&');
+    }
+
+
+    function sendMautic(event) {
+        const vorname = document.getElementById('firstname').value
+        const nachname = document.getElementById('surname').value;
+
+        const email = document.getElementById('email').value;
+        const firma = document.getElementById('company').value;
+        const anrede = document.getElementById('salutation').value;
+        const subject = document.getElementById('subject').value;
+
+
+        // Rest of the code...
+
+        const FORM_ID = "8"
+        const url = 'https://mautic.bitblade.io/form/submit';
+
+        const form = document.getElementById('contact');
+        const formData = new FormData(form);
+        let formFields = '';
+
+        for (const [key, value] of formData.entries()) {
+            formFields += `${key}: ${value}\n`;
+        }
+
+
+
+        const data = {
+            'mauticform[formId]': FORM_ID,
+            'mauticform[vorname]': vorname,
+            'mauticform[nachname1]': nachname,
+            'mauticform[email]': email,
+            'mauticform[anrede]': anrede,
+            'mauticform[firma]': firma,
+            'mauticform[nachricht]': formFields,
+            'mauticform[betreff]': subject,
+
+        };
+
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+                'X-Requested-With': 'XMLHttpRequest',
+            },
+            body: serializeData(data)
+        }).then(response => {
+            if (response.ok) {
+                console.log('Form submitted successfully');
+            } else {
+                console.error('Form submission failed');
+            }
+        }).catch(error => {
+            console.error('Error submitting form', error);
+        });
+    }
+</script>
+    
+  </main>
+
+  <section class=" md:px-10 2xl:py-40 bg-black pt-20">
+  <div class="container mx-auto px-8 md:px-10">
+    <div class="flex flex-wrap -mx-2 md:-mx-4 pb-6 lg:pb-20 border-b border-gray-500">
+      <div class="w-full md:w-3/5">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Rechtliches</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/impressum">Impressum</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/AGB">AGB</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/datenschutz">Datenschutz</a></li>
+            </ul>
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white mt-6 md:mt-12">Unternehmen</h3>
+            <ul>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/ueber_uns">Über uns</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/kontakt">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Tablets</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11">Durabook R11</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r11l">Durabook R11L</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-u11i">Durabook U11I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-r8">Durabook R8</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Laptops</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s15">Durabook S15</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-s14i">Durabook S14I</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/produkte/durabook-z14i">Durabook Z14I</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/2 lg:w-1/4 px-2 md:px-4 mb-6 md:mb-12">
+            <h3 class="mb-6 md:mb-8 lg:mb-10 text-lg md:text-xl font-bold font-heading text-white">Branchen</h3>
+            <ul class="mb-6 md:mb-10">
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/werkstatt">Werkstatt</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/militaer">Militär</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/industrie">Industrie</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/autohaus">Autohaus</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/transport">Transport</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/logistik">Logistik</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/bau">Bau</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/oeffentliche-sicherheit">Öffentliche Sicherheit</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/landwirtschaft">Forst- und Landwirtschaft</a></li>
+              <li class="mb-3 md:mb-5"><a class="text-gray-200 hover:text-blue-500" href="/branchen/outdoor">Outdoor</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-full lg:w-2/5 px-4 order-first lg:order-last mb-16 lg:mb-0">
+        <h3 class="mb-14 text-xl font-bold text-white">Newsletter</h3>
+        <p class="text-gray-300 mb-10">Abonnieren und alle neuen News direkt erfahren</p>
+        <form action="#">
+          <div class="max-w-sm mb-8 flex items-center bg-white text-black rounded-full">
+            <input class="pl-4 py-4 my-1 ml-1 rounded-full border-transparent placeholder-gray-200" type="email" placeholder="Email address">
+            <button class="ml-auto px-4 lg:px-6 py-4 mr-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Bestätigen</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="flex flex-wrap justify-between items-center pt-6 md:pt-10 mb-4 md:mb-8 lg:mb-0">
+      <div class="flex items-center">
+        <p class="text-sm text-white">
+          <span>Webdesign erstellt mit ❤
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</span></p>
+</div>
+</div>
+</div></section>
+</body>
+</html>
