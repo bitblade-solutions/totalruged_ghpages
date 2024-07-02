@@ -184,6 +184,6 @@ html {
 }
 //* In Ihrer CSS-Datei */
 .bg-gradient-soft {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 15, 17, 1) 100%);
+  background: linear-gradient(180deg, rgba(15, 15, 17, 1) 0%, rgba(0, 0, 0,0) 100%);
 }
 
