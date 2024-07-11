@@ -534,7 +534,26 @@
 
 <script>
 
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+
+  gtag('config', 'AW-16451083839');
+
+
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16458586897/Inh5COOX7MEZEJG2iKg9',
+        'event_callback': callback
+    });
+    return false;
+  }
 
     function serializeData(obj) {
         if ('string' == typeof obj) {
