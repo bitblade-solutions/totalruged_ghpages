@@ -50,7 +50,7 @@
             </button>
         </div>
         <p class="text-gray-200 text-sm pb-6">
-            Wir verwenden Cookies und andere Tracking-Technologien, um Ihr Surferlebnis auf unserer Website zu verbessern, um Ihnen personalisierte Inhalte und gezielte Werbung zu zeigen, um unseren Website-Verkehr zu analysieren und um zu verstehen, woher unsere Besucher kommen. 
+            Wir verwenden Cookies und andere Tracking-Technologien, um Ihr Surferlebnis auf unserer Website zu verbessern, um Ihnen personalisierte Inhalte und gezielte Werbung zu zeigen, um unseren Website-Verkehr zu analysieren und um zu verstehen, woher unsere Besucher kommen.
         </p>
         <div class="flex flex-row"></div>
         <button id="cookie-notice-accept" x-on:click="showBanner = false; localStorage.setItem('cookieConsentAccepted', 'true'); loadAdditionalScripts();" href="#" class="mt-4 bg-blue-500 hover:bg-blue-600 rounded transition duration-200 text-white font-bold py-2 px-4">
@@ -67,9 +67,9 @@
 
     function loadAdditionalScripts() {
         if (localStorage.getItem('cookieConsentAccepted')) {
-            
+
             //matomo
-        
+
 
             var _paq = window._paq = window._paq || [];
             /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -85,12 +85,33 @@
             })();
 
 
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-            
+          
+            gtag('config', 'AW-16451083839');
+
+
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-16458586897/Inh5COOX7MEZEJG2iKg9',
+                  'event_callback': callback
+              });
+              return false;
+            }
+
+
 
         }
     }
 </script>
+
 
 
   
