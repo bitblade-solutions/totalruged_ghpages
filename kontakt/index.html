@@ -336,7 +336,7 @@
   <main>
     <div class="bg-black text-white" x-data="{ message: 'I ❤️ Alpine' }">
     <div class="container mx-auto px-4 py-10">
-        <form x-on:submit.prevent="sendMautic()" id="contact" class="mx-auto max-w-4xl">
+        <form x-on:submit.prevent="sendForm()" id="contact" class="mx-auto max-w-4xl">
             <h1 class="max-w-2xl mt-10 mb-8 text-4xl 2xl:text-6xl text-white font-bold font-heading">Kontakt</h1>
             <div class="mb-4">
                 <label for="subject" class="block">Betreff *</label>
@@ -622,26 +622,27 @@
     } */
 
 
-    function sendMautic() {
-        const form = document.getElementById('contact');
-        const formData = new FormData(form);
-
-        fetch('https://mautic.bitblade.io/form/submit?formId=8', {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Formular erfolgreich gesendet!');
-            } else {
-                alert('Fehler beim Senden des Formulars.');
-            }
-        })
-        .catch(error => {
-            console.error('Fehler:', error);
-            alert('Es ist ein Fehler aufgetreten.');
-        });
-    }
+    function sendForm() {
+    const form = document.getElementById('contact');
+    const formData = new FormData(form);
+    const data = JSON.stringify(Object.fromEntries(formData));
+    fetch('https://robustbook.com/de/include/processcontactform.php', {
+        method: 'POST',
+        body: data,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Formular erfolgreich gesendet!');
+        } else {
+            alert('Fehler beim Senden.');
+        }
+    })
+    .catch(error => {
+        console.error('Fehler:', error);
+        alert('Es ist ein Fehler aufgetreten.');
+    });
+}
 </script>
 
 
