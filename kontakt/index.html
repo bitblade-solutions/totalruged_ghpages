@@ -565,7 +565,7 @@
     }
 
 
-    function sendMautic(event) {
+ /*   function sendMautic(event) {
         const vorname = document.getElementById('firstname').value
         const nachname = document.getElementById('surname').value;
 
@@ -618,6 +618,28 @@
             }
         }).catch(error => {
             console.error('Error submitting form', error);
+        });
+    } */
+
+
+    function sendMautic() {
+        const form = document.getElementById('contact');
+        const formData = new FormData(form);
+
+        fetch('https://mautic.bitblade.io/form/submit?formId=8', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Formular erfolgreich gesendet!');
+            } else {
+                alert('Fehler beim Senden des Formulars.');
+            }
+        })
+        .catch(error => {
+            console.error('Fehler:', error);
+            alert('Es ist ein Fehler aufgetreten.');
         });
     }
 </script>
