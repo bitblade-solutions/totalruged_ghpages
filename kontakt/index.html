@@ -114,515 +114,669 @@
 
 
 
-  
-<nav class="bg-black">
-  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-4 text-gray-200">
-    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0">
-      <span class="text-md md:text-lg hover:text-white block md:inline"><i class="fas fa-phone-alt"></i> +49 (0) 69 271 470 985</span>
+  <nav class="bg-black sticky top-0 z-50 border-b border-gray-800">
+  <!-- Top bar with contact info -->
+  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-3 text-gray-300 bg-gray-900/50 backdrop-blur-sm">
+    <div class="w-full md:w-auto text-center md:text-right mb-2 md:px-4 md:mb-0">
+      <a href="tel:+4969271470985" class="text-md md:text-lg hover:text-blue-400 transition-colors duration-200 block md:inline">
+        <i class="fas fa-phone-alt mr-2"></i>+49 (0) 69 271 470 985
+      </a>
     </div>
-    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0 md:ml-4">
-      <span class="text-md md:text-lg hover:text-white block md:inline"><i class="fas fa-envelope"></i> kontakt@totalrugged.com</span>
+    <div class="w-full md:w-auto text-center md:text-right mb-2 md:px-4 md:mb-0 md:ml-4">
+      <a href="mailto:kontakt@totalrugged.com" class="text-md md:text-lg hover:text-blue-400 transition-colors duration-200 block md:inline">
+        <i class="fas fa-envelope mr-2"></i>kontakt@totalrugged.com
+      </a>
     </div>
     <div class="w-full md:w-auto text-center md:px-4 md:text-right">
-      <a href="/kontakt/" class="block text-center px-8 py-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Kontakt</a>
+      <a href="/kontakt/" class="inline-block px-6 py-2 text-white font-bold bg-blue-600 hover:bg-blue-700 rounded-full transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+        Kontakt
+      </a>
     </div>
   </div>
 
-  <!-- Logo -->
-  <div class="flex justify-between items-center w-full p-4 py-8 text-white">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-8 px-16" alt="Flowbite Logo" loading="lazy">
-    </a>
-  </div>
+  <div class="max-w-screen-xl mx-auto px-4">
+    <!-- Logo and Navigation Container -->
+    <div class="flex flex-wrap items-center justify-between py-4">
+      <!-- Logo section -->
+      <a href="/" class="flex items-center transform hover:scale-105 transition-transform duration-200">
+        <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-10" alt="TotalRugged Logo" loading="lazy">
+      </a>
 
-
-
-
-    <!-- display items -->
-     <div class="p-4 md:hidden  justify-between items-center">
-<button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-left p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="mega-menu-full" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
-            </svg>
-      </button>
-    </div>
-    <!-- items -->
-      <div id="mega-menu-full" class="items-center justify-start pl-4 font-medium hidden w-full md:flex md:w-auto md:order-1">
-        <ul class="md:flex xs:flex-col md:flex-row  xs:p-4 md:p-0 mt-4 rounded-lg bg-black md:bg-transparent md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-              <li>
-                <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Tablets<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg></button>
-              </li>
-              <li>
-                  <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent mb-4 md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Laptops<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg></button>
-              </li>
-              <li>
-                <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Branchen<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg></button>
-              </li>
-              <li>
-                <a href="/ueber_uns/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Über uns</a>
-            </li>
-
-
-          </ul>
-
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+          <span class="sr-only">Menü öffnen</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+          </svg>
+        </button>
       </div>
-  
 
-
-<!-- dropdown 1 -->
-<div id="mega-menu-full-dropdown1" class="hidden mt-1 shadow-sm bg-gray-600">
-  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
-    <ul class="flex flex-wrap justify-between">
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-r8/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Image Durabook R8" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook R8</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-r11/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_R11/A-01.webp" alt="Image Durabook R11" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook R11</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-r11l/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_R11L/A-01.webp" alt="Image Durabook R11L" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook R11L</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-u11i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Image Durabook U11I" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook U11I</div>
-        </a>
-      </li>
-    </ul>
+      <!-- Navigation items -->
+      <div id="mega-menu-full" class="hidden w-full md:block md:w-auto">
+        <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+          <li>
+            <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center w-full py-2 px-3 text-gray-200 rounded md:w-auto hover:text-blue-400 md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">
+              Tablets
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center w-full py-2 px-3 text-gray-200 rounded md:w-auto hover:text-blue-400 md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">
+              Laptops
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center w-full py-2 px-3 text-gray-200 rounded md:w-auto hover:text-blue-400 md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">
+              Branchen
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a href="/ueber_uns/" class="block py-2 px-3 text-gray-200 rounded hover:text-blue-400 md:p-0 transition-colors duration-200">Über uns</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
 
-
-
-   <!-- dropdown 2 -->
-   <div id="mega-menu-full-dropdown2" class="hidden mt-1 shadow-sm bg-gray-600">
+  <!-- dropdown 1 -->
+  <div id="mega-menu-full-dropdown1" class="hidden mt-1 border-t border-gray-700 bg-gray-900/95 backdrop-blur-sm shadow-xl transition-all duration-300">
     <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
       <ul class="flex flex-wrap justify-between">
-        <li class="w-1/2 lg:w-1/3">
-          <a href="/produkte/durabook-s15/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img class="w-40 mx-auto" src="/assets/images/L_S15/front.webp" alt="Image Durabook S15" loading="lazy">
-            <div class="font-semibold text-white text-center mt-2">Durabook S15</div>
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-r8/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Durabook R8 - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook R8</div>
           </a>
         </li>
-        <li class="w-1/2 lg:w-1/3">
-          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img class="w-40 mx-auto" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Image Durabook S14I" loading="lazy">
-            <div class="font-semibold text-white text-center mt-2">Durabook S14I</div>
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-r11/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_R11/A-01.webp" alt="Durabook R11 - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook R11</div>
           </a>
         </li>
-        <li class="w-1/2 lg:w-1/3">
-          <a href="/produkte/durabook-z14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img class="w-40 mx-auto" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Image Durabook Z14I" loading="lazy">
-            <div class="font-semibold text-white text-center mt-2">Durabook Z14I</div>
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-r11l/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_R11L/A-01.webp" alt="Durabook R11L - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook R11L</div>
           </a>
         </li>
-        <!-- Falls weitere Elemente hinzufügt werden sollen -->
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-u11i/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Durabook U11I - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook U11I</div>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 
-
-<!-- dropdown 3 -->
-<div id="mega-menu-full-dropdown3" class="hidden mt-1 shadow-sm bg-gray-600">
-  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
-    <ul class="flex flex-wrap">
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/werkstatt/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/workshop.webp" alt="Image Werkstatt" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Werkstatt</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/autohaus/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/car_dealer.webp" alt="Image Autohaus" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Autohaus</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/militaer/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/soldiers.webp" alt="Image Militär" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Militär</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/industrie/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/industry.webp" alt="Image Industrie" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Industrie</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/sicherheit/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/police.webp" alt="Image Sicherheit" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Öffentliche Sicherheit</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/transport/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/transport.webp" alt="Image Transport" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Transport</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/logistik/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/logistic.webp" alt="Image Logistik" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Logistik</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/bau/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/construction.webp" alt="Image Bau" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Bau</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/landwirtschaft/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/agrar.webp" alt="Image Landwirtschaft" loading="lazy">
-          <div class="font-semibold text-center text-white mt-6">Landwirtschaft</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/outdoor/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/outdoor.webp" alt="Image Outdoor" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Outdoor</div>
-        </a>
-      </li>
-    </ul>
+  <!-- dropdown 2 -->
+  <div id="mega-menu-full-dropdown2" class="hidden mt-1 border-t border-gray-700 bg-gray-900/95 backdrop-blur-sm shadow-xl transition-all duration-300">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap justify-between">
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s15/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/L_S15/front.webp" alt="Durabook S15 - Robustes Laptop" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook S15</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Durabook S14I - Robustes Laptop" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook S14I</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-z14i/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Durabook Z14I - Robustes Laptop" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook Z14I</div>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
-
+  <!-- dropdown 3 -->
+  <div id="mega-menu-full-dropdown3" class="hidden mt-1 border-t border-gray-700 bg-gray-900/95 backdrop-blur-sm shadow-xl transition-all duration-300">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap">
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/werkstatt/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/workshop.webp" alt="Werkstatt - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Werkstatt</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/autohaus/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/car_dealer.webp" alt="Autohaus - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Autohaus</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/militaer/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/soldiers.webp" alt="Militär - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Militär</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/industrie/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/industry.webp" alt="Industrie - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Industrie</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/sicherheit/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/police.webp" alt="Öffentliche Sicherheit - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Öffentliche Sicherheit</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/transport/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/transport.webp" alt="Transport - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Transport</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/logistik/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/logistic.webp" alt="Logistik - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Logistik</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/bau/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/construction.webp" alt="Bau - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Bau</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/landwirtschaft/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/agrar.webp" alt="Landwirtschaft - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Landwirtschaft</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/outdoor/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/outdoor.webp" alt="Outdoor - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Outdoor</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </nav>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const buttons = document.querySelectorAll('[data-collapse-toggle]');
-      const dropdowns = document.querySelectorAll('.hidden.mt-1');
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll('[data-collapse-toggle]');
+    const dropdowns = document.querySelectorAll('.hidden.mt-1');
+    let activeDropdown = null;
 
-      buttons.forEach(button => {
-        button.addEventListener('click', function () {
-          const targetDropdownId = this.getAttribute('data-collapse-toggle');
-          const targetDropdown = document.getElementById(targetDropdownId);
+    // Add rotation class to arrow icons when dropdown is active
+    const rotateArrow = (button, show) => {
+      const arrow = button.querySelector('svg');
+      if (show) {
+        arrow.classList.add('rotate-180');
+      } else {
+        arrow.classList.remove('rotate-180');
+      }
+    };
 
-          dropdowns.forEach(dropdown => {
-            if (dropdown !== targetDropdown) {
-              dropdown.classList.add('hidden');
-            }
-          });
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const targetDropdownId = this.getAttribute('data-collapse-toggle');
+        const targetDropdown = document.getElementById(targetDropdownId);
 
-          targetDropdown.classList.toggle('hidden');
-        });
+        // Reset all arrows
+        buttons.forEach(btn => rotateArrow(btn, false));
+
+        if (activeDropdown && activeDropdown !== targetDropdown) {
+          activeDropdown.classList.add('hidden');
+        }
+
+        const isHidden = targetDropdown.classList.contains('hidden');
+        targetDropdown.classList.toggle('hidden');
+        rotateArrow(this, isHidden);
+        
+        activeDropdown = isHidden ? targetDropdown : null;
       });
     });
-  </script>
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('[data-collapse-toggle]') && !event.target.closest('.mt-1')) {
+        dropdowns.forEach(dropdown => dropdown.classList.add('hidden'));
+        buttons.forEach(btn => rotateArrow(btn, false));
+        activeDropdown = null;
+      }
+    });
+  });
+</script>
 
 
   <main>
-    <div class="bg-black text-white" x-data="{ message: 'I ❤️ Alpine' }">
+    <style>
+[x-cloak] { display: none !important; }
+</style>
+
+<div class="bg-black text-white" x-data="contactForm">
     <div class="container mx-auto px-4 py-10">
+        <!-- Progress Steps -->
+        <div class="max-w-4xl mx-auto mb-8">
+            <div class="flex justify-between">
+                <div class="flex-1">
+                    <div class="relative">
+                        <div class="h-1 bg-gray-700">
+                            <div class="h-1 bg-blue-500 transition-all duration-500" :style="`width: ${((currentStep - 1) / 2) * 100}%`"></div>
+                        </div>
+                        <div class="absolute top-0 -mt-2 w-full flex justify-between">
+                            <template x-for="step in 3" :key="step">
+                                <div class="flex flex-col items-center">
+                                    <div class="w-6 h-6 rounded-full flex items-center justify-center" :class="{'bg-blue-500': currentStep &gt;= step, 'bg-gray-700': currentStep &lt; step}">
+                                        <span class="text-white text-sm" x-text="step"></span>
+                                    </div>
+                                    <span class="mt-2 text-sm text-gray-400" x-text="step === 1 ? 'Anfrage' : step === 2 ? 'Details' : 'Kontakt'"></span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <form x-on:submit.prevent="sendForm()" id="contact" class="mx-auto max-w-4xl">
             <h1 class="max-w-2xl mt-10 mb-8 text-4xl 2xl:text-6xl text-white font-bold font-heading">Kontakt</h1>
-            <div class="mb-4">
-                <label for="subject" class="block">Betreff *</label>
-                <select if class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" name="subject" id="subject">
-                    <option value="quote">Unverbindliches Angebot anfordern</option>
-                    <option value="callback">Rückruf vereinbaren</option>
-                    <option value="productinfo">Produktinformationen anfragen</option>
-                    <option value="haendler">Händler werden</option>
-                    <option value="other">Sonstiges</option>
-                    </select>
-            </div>
-            <div id="device-group" class="mb-4">
-                <label for="device" class="block">Gerät *</label>
-                <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="device" name="device" required>
-                    <option value="none">Bitte auswählen</option>
-                    <option value="r8">Durabook R8 Tablet</option>
-                    <option value="r11">Durabook R11 Tablet</option>
-                    <option value="r11l">Durabook R11L Tablet</option>
-                    <option value="u11i">Durabook U11I Tablet</option>
-                    <option value="s15">Durabook S15 Laptop</option>
-                    <option value="s14i">Durabook S14I Laptop</option>
-                    <option value="z14i">Durabook Z14I Laptop</option>
-                </select>
-            </div>
-            <div id="amount-group" class="mb-4">
-                <label for="amount" class="block">Anzahl *</label>
-                <input type="number" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="amount" value="1" name="amount" min="1" required>
-            </div>
-            <div id="equipment" class="mb-4"></div>
 
-            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Persönliche Daten
-            </h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <div>
-                    <label for="salutation" class="block">Anrede *</label>
-                    <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="salutation" name="salutation" required>
-                        <option>Herr</option>
-                        <option>Frau</option>
+            <!-- Step 1: Initial Request -->
+            <div x-show="currentStep === 1" x-cloak data-step="1">
+                <div class="mb-4">
+                    <label for="subject" class="block">Betreff *</label>
+                    <select class="form-select text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" name="subject" id="subject" required>
+                        <option value="quote">Unverbindliches Angebot anfordern</option>
+                        <option value="callback">Rückruf vereinbaren</option>
+                        <option value="productinfo">Produktinformationen anfragen</option>
+                        <option value="haendler">Händler werden</option>
+                        <option value="other">Sonstiges</option>
                     </select>
                 </div>
-                <div>
-                    <label for="firstname" class="block">Vorname *</label>
-                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="firstname" name="firstname" required>
-                </div>
-                <div>
-                    <label for="surname" class="block">Nachname *</label>
-                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="surname" name="surname" required>
-                </div>
-            </div>
 
-            <div id="company-group" class="mb-4">
-                <label for="company" class="block">Firma *</label>
-                <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="company" name="company" required>
-            </div>
-
-            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Adresse</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label for="street" class="block">Straße *</label>
-                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="street" name="street" required>
-                </div>
-                <div>
-                    <label for="housenumber" class="block">Hausnummer *</label>
-                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="housenumber" name="housenumber" required>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label for="zipcode" class="block">Postleitzahl *</label>
-                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="zipcode" name="zipcode" required>
-                </div>
-                <div>
-                    <label for="city" class="block">Ort *</label>
-                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="city" name="city" required>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label for="country" class="block">Land *</label>
-                    <select class="form-select text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="country" name="country" required>
-                        <option value="germany">Deutschland</option>
-                        <option value="austria">Österreich</option>
-                        <option value="switzerland">Schweiz</option>
-                        <option value="belgium">Belgien</option>
-                        <option value="bulgaria">Bulgarien</option>
-                        <option value="croatia">Kroatien</option>
-                        <option value="cyprus">Zypern</option>
-                        <option value="czech-republic">Tschechien</option>
-                        <option value="denmark">Dänemark</option>
-                        <option value="estonia">Estland</option>
-                        <option value="finland">Finnland</option>
-                        <option value="france">Frankreich</option>
-                        <option value="greece">Griechenland</option>
-                        <option value="hungary">Ungarn</option>
-                        <option value="ireland">Irland</option>
-                        <option value="italy">Italien</option>
-                        <option value="latvia">Lettland</option>
-                        <option value="lithuania">Litauen</option>
-                        <option value="luxembourg">Luxemburg</option>
-                        <option value="malta">Malta</option>
-                        <option value="netherlands">Niederlande</option>
-                        <option value="poland">Polen</option>
-                        <option value="portugal">Portugal</option>
-                        <option value="romania">Rumänien</option>
-                        <option value="slovakia">Slowakei</option>
-                        <option value="slovenia">Slowenien</option>
-                        <option value="spain">Spanien</option>
-                        <option value="sweden">Schweden</option>
+                <div id="device-group" class="mb-4">
+                    <label for="device" class="block">Gerät *</label>
+                    <select x-ref="deviceSelect" x-on:change="updateDevice()" class="form-select text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="device" name="device" required>
+                        <option value="none">Bitte auswählen</option>
+                        <option value="r8">Durabook R8 Tablet</option>
+                        <option value="r11">Durabook R11 Tablet</option>
+                        <option value="r11l">Durabook R11L Tablet</option>
+                        <option value="u11i">Durabook U11I Tablet</option>
+                        <option value="s15">Durabook S15 Laptop</option>
+                        <option value="s14i">Durabook S14I Laptop</option>
+                        <option value="z14i">Durabook Z14I Laptop</option>
                     </select>
                 </div>
-                <div>
-                    <div id="vatidgroup"></div>
+
+                <div id="amount-group" class="mb-4">
+                    <label for="amount" class="block">Anzahl *</label>
+                    <input type="number" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="amount" value="1" name="amount" min="1" required>
+                </div>
+
+                <div id="upgrades" class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <template x-for="upgrade in currentUpgrades" :key="upgrade.id">
+                        <label class="cursor-pointer">
+                            <div class="flex items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-200" :class="{ 'ring-2 ring-blue-500 bg-gray-700': $refs[upgrade.id]?.checked }">
+                                <input type="checkbox" :ref="upgrade.id" :name="'upgrades_' + upgrade.id" :value="'yes'" class="form-checkbox h-5 w-5 text-blue-500 rounded border-gray-300 focus:ring-blue-500">
+                                <div class="ml-4">
+                                    <div class="text-white font-medium" x-text="upgrade.name"></div>
+                                </div>
+                            </div>
+                        </label>
+                    </template>
+                </div>
+
+                <div class="flex justify-end mt-8">
+                    <button type="button" x-on:click="nextStep()" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-200">
+                        Weiter
+                    </button>
                 </div>
             </div>
 
-            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Kontaktdaten</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label for="email" class="block">E-Mail Adresse *</label>
-                    <input type="email" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="email" name="email" autocomplete="off" required>
+            <!-- Step 2: Personal Details -->
+            <div x-show="currentStep === 2" x-cloak data-step="2">
+                <h3 class="max-w-2xl mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Persönliche Daten</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <div>
+                        <label for="salutation" class="block">Anrede *</label>
+                        <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="salutation" name="salutation" required>
+                            <option>Herr</option>
+                            <option>Frau</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="firstname" class="block">Vorname *</label>
+                        <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="firstname" name="firstname" required>
+                    </div>
+                    <div>
+                        <label for="surname" class="block">Nachname *</label>
+                        <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="surname" name="surname" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="phone" class="block">Telefonnummer *</label>
-                    <input type="tel" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="phone" name="phone" required>
+
+                <div id="company-group" class="mb-4">
+                    <label for="company" class="block">Firma *</label>
+                    <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="company" name="company" required>
+                </div>
+
+                <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Adresse</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="street" class="block">Straße *</label>
+                        <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="street" name="street" required>
+                    </div>
+                    <div>
+                        <label for="housenumber" class="block">Hausnummer *</label>
+                        <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="housenumber" name="housenumber" required>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="zipcode" class="block">Postleitzahl *</label>
+                        <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="zipcode" name="zipcode" required>
+                    </div>
+                    <div>
+                        <label for="city" class="block">Ort *</label>
+                        <input type="text" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="city" name="city" required>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="country" class="block">Land *</label>
+                        <select class="form-select text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="country" name="country" required>
+                            <option value="germany">Deutschland</option>
+                            <option value="austria">Österreich</option>
+                            <option value="switzerland">Schweiz</option>
+                            <option value="belgium">Belgien</option>
+                            <option value="bulgaria">Bulgarien</option>
+                            <option value="croatia">Kroatien</option>
+                            <option value="cyprus">Zypern</option>
+                            <option value="czech-republic">Tschechien</option>
+                            <option value="denmark">Dänemark</option>
+                            <option value="estonia">Estland</option>
+                            <option value="finland">Finnland</option>
+                            <option value="france">Frankreich</option>
+                            <option value="greece">Griechenland</option>
+                            <option value="hungary">Ungarn</option>
+                            <option value="ireland">Irland</option>
+                            <option value="italy">Italien</option>
+                            <option value="latvia">Lettland</option>
+                            <option value="lithuania">Litauen</option>
+                            <option value="luxembourg">Luxemburg</option>
+                            <option value="malta">Malta</option>
+                            <option value="netherlands">Niederlande</option>
+                            <option value="poland">Polen</option>
+                            <option value="portugal">Portugal</option>
+                            <option value="romania">Rumänien</option>
+                            <option value="slovakia">Slowakei</option>
+                            <option value="slovenia">Slowenien</option>
+                            <option value="spain">Spanien</option>
+                            <option value="sweden">Schweden</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div id="vatidgroup"></div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between mt-8">
+                    <button type="button" x-on:click="previousStep()" class="px-6 py-3 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition duration-200">
+                        Zurück
+                    </button>
+                    <button type="button" x-on:click="nextStep()" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-200">
+                        Weiter
+                    </button>
                 </div>
             </div>
 
-            <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Sonstiges</h3>
-            <div id="note-group" class="mb-4">
-                <label for="note" class="block">Sonstige Anmerkungen</label>
-                <textarea class="form-textarea pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="note" rows="3" name="note" placeholder="Weiteres Zubehör benötigt? Interesse an Mietkauf oder Leasing?"></textarea>
-            </div>
-            <div class="mb-4">
-                <label for="referrer" class="block">Wie haben Sie über uns erfahren?</label>
-                <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="referrer" name="referrer" required>
-                    <option value="Sonstiges">Sonstiges</option>
-                    <option value="Google">Google</option>
-                    <option value="Bing">Bing</option>
-                    <option value="Linkedin">LinkedIn</option>
-                    <option value="Empfehlung">Empfehlung</option>
-                </select>
-            </div>
-            <div class="mb-4">
-                <input type="checkbox" class="form-checkbox" id="newsletter" name="newsletter" value="Ja">
-                <label class="inline-block ml-2 mt-2" for="newsletter">Jetzt kostenfrei Newsletter abonnieren und
-                    <b>gratis Versand</b>, nützliche Tipps, Angebote und Produktneuheiten erhalten.</label>
-            </div>
-            <div id="branch" class="invisible mb-4">
-                <div class="form-group">
-                    <label for="salutation">Branche</label>
-                    <select class="form-control" name="branch" required>
-                        <option value="7e31a85f50">Andere</option>
-                        <option value="9b78e6fbaa">Werkstatt</option>
-                        <option value="d0b8360f09">Militär</option>
-                        <option value="62a66b8380">Industrie</option>
-                        <option value="08d3006de1">Öffentliche Sicherheit</option>
-                        <option value="0e1f4a31e8">Transport</option>
-                        <option value="73f937bd58">Logistik</option>
-                        <option value="5a3d7cf380">Bau</option>
-                        <option value="9fb4b20d6c">Forst- und Landwirtschaft</option>
+            <!-- Step 3: Contact Details -->
+            <div x-show="currentStep === 3" x-cloak data-step="3">
+                <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Kontaktdaten</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="email" class="block">E-Mail Adresse *</label>
+                        <input type="email" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="email" name="email" autocomplete="off" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block">Telefonnummer *</label>
+                        <input type="tel" class="form-input text-black mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <h3 class="max-w-2xl mt-10 mb-8 text-2xl 2xl:text-4xl text-white font-bold font-heading">Sonstiges</h3>
+                <div id="note-group" class="mb-4">
+                    <label for="note" class="block">Sonstige Anmerkungen</label>
+                    <textarea class="form-textarea pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="note" rows="3" name="note" placeholder="Weiteres Zubehör benötigt? Interesse an Mietkauf oder Leasing?"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="referrer" class="block">Wie haben Sie über uns erfahren?</label>
+                    <select class="form-select  text-black pl-3 mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 equal-height" id="referrer" name="referrer" required>
+                        <option value="Sonstiges">Sonstiges</option>
+                        <option value="Google">Google</option>
+                        <option value="Bing">Bing</option>
+                        <option value="Linkedin">LinkedIn</option>
+                        <option value="Empfehlung">Empfehlung</option>
                     </select>
                 </div>
+                <div class="mb-4">
+                    <input type="checkbox" class="form-checkbox" id="newsletter" name="newsletter" value="Ja">
+                    <label class="inline-block ml-2 mt-2" for="newsletter">Jetzt kostenfrei Newsletter abonnieren und
+                        <b>gratis Versand</b>, nützliche Tipps, Angebote und Produktneuheiten erhalten.</label>
+                </div>
+                <div id="branch" class="invisible mb-4">
+                    <div class="form-group">
+                        <label for="salutation">Branche</label>
+                        <select class="form-control" name="branch" required>
+                            <option value="7e31a85f50">Andere</option>
+                            <option value="9b78e6fbaa">Werkstatt</option>
+                            <option value="d0b8360f09">Militär</option>
+                            <option value="62a66b8380">Industrie</option>
+                            <option value="08d3006de1">Öffentliche Sicherheit</option>
+                            <option value="0e1f4a31e8">Transport</option>
+                            <option value="73f937bd58">Logistik</option>
+                            <option value="5a3d7cf380">Bau</option>
+                            <option value="9fb4b20d6c">Forst- und Landwirtschaft</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <input type="checkbox" class="form-checkbox" id="privacy" required>
+                    <label class="inline-block ml-2" for="privacy">Ich akzeptiere <a target="_blank" href="/AGB/">AGB</a>
+                        und <a target="_blank" href="/datenschutz/">Datenschutzerklärung</a> *</label>
+                </div>
+
+                <input type="hidden" name="site" value="$site">
+
+                <div class="flex justify-between mt-8">
+                    <button type="button" x-on:click="previousStep()" class="px-6 py-3 bg-gray-700 text-white rounded-full hover:bg-gray-600 transition duration-200">
+                        Zurück
+                    </button>
+                    <button type="submit" class="flex items-center gap-2 px-8 py-4 text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">
+                        <span class="icon-[fa6-solid--paper-plane]"></span>
+                        <span>Absenden</span>
+                    </button>
+                </div>
             </div>
-            <div class="mb-4">
-                <input type="checkbox" class="form-checkbox" id="privacy" required>
-                <label class="inline-block ml-2" for="privacy">Ich akzeptiere <a target="_blank" href="/AGB/">AGB</a>
-                    und <a target="_blank" href="/datenschutz/">Datenschutzerklärung</a> *</label>
-            </div>
-
-            <input type="hidden" name="site" value="$site">
-
-            <!-- Start Mautic Form -->
-
-
-
-
-
-
-
-
-            <div class="flex justify-center md:justify-start">
-                <button type="submit" class="flex flex-row content-center justify-center items-center  gap-2 px-8 py-4 text-lg mt-12 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">
-
-                    <span class="icon-[fa6-solid--paper-plane]"></span>
-
-                    <span>Absenden</span>
-                </button>
-            </div>
-
         </form>
     </div>
 </div>
 
-
 <script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('contactForm', () => ({
+        currentStep: 1,
+        deviceUpgrades: {
+            'r8': [
+                { id: 'ram', name: 'RAM Upgrade auf 8GB', price: '199' },
+                { id: 'ssd', name: 'SSD Upgrade auf 512GB', price: '299' },
+                { id: 'battery', name: 'Zusätzlicher Akku', price: '199' }
+            ],
+            'r11': [
+                { id: 'ram', name: 'RAM Upgrade auf 16GB', price: '299' },
+                { id: 'ssd', name: 'SSD Upgrade auf 1TB', price: '399' },
+                { id: 'battery', name: 'Hot-Swap Akku', price: '249' }
+            ],
+            'r11l': [
+                { id: 'ram', name: 'RAM Upgrade auf 32GB', price: '399' },
+                { id: 'ssd', name: 'SSD Upgrade auf 2TB', price: '599' },
+                { id: 'battery', name: 'Extended Battery', price: '299' }
+            ],
+            'u11i': [
+                { id: 'ram', name: 'RAM Upgrade auf 32GB', price: '399' },
+                { id: 'ssd', name: 'SSD Upgrade auf 2TB', price: '599' },
+                { id: 'battery', name: 'Hot-Swap Akku', price: '299' }
+            ],
+            's15': [
+                { id: 'ram', name: 'RAM Upgrade auf 64GB', price: '599' },
+                { id: 'ssd', name: 'SSD Upgrade auf 4TB', price: '899' },
+                { id: 'gpu', name: 'Dedizierte GPU', price: '799' }
+            ],
+            's14i': [
+                { id: 'ram', name: 'RAM Upgrade auf 32GB', price: '399' },
+                { id: 'ssd', name: 'SSD Upgrade auf 2TB', price: '599' },
+                { id: 'battery', name: 'Extended Battery', price: '349' }
+            ],
+            'z14i': [
+                { id: 'ram', name: 'RAM Upgrade auf 64GB', price: '599' },
+                { id: 'ssd', name: 'SSD Upgrade auf 4TB', price: '899' },
+                { id: 'gpu', name: 'Dedizierte GPU Upgrade', price: '999' }
+            ]
+        },
+        selectedDevice: 'none',
+        currentUpgrades: [],
+        formData: {},
+        
+        init() {
+            this.$watch('currentStep', value => {
+                window.scrollTo(0, 0);
+            });
+        },
 
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-
-  gtag('config', 'AW-16451083839');
-
-
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-16458586897/Inh5COOX7MEZEJG2iKg9',
-        'event_callback': callback
-    });
-    return false;
-  }
-
-    function serializeData(obj) {
-        if ('string' == typeof obj) {
-            return obj;
-        }
-        return Object.keys(obj).map(function (key) {
-            return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
-        }).join('&');
-    }
-
-
- /*   function sendMautic(event) {
-        const vorname = document.getElementById('firstname').value
-        const nachname = document.getElementById('surname').value;
-
-        const email = document.getElementById('email').value;
-        const firma = document.getElementById('company').value;
-        const anrede = document.getElementById('salutation').value;
-        const subject = document.getElementById('subject').value;
-
-        gtag_report_conversion("https://totalrugged.com/kontakt/");
-        // Rest of the code...
-
-        const FORM_ID = "8"
-        const url = 'https://mautic.bitblade.io/form/submit';
-
-        const form = document.getElementById('contact');
-        const formData = new FormData(form);
-        let formFields = '';
-
-        for (const [key, value] of formData.entries()) {
-            formFields += `${key}: ${value}\n`;
-        }
-
-
-
-        const data = {
-            'mauticform[formId]': FORM_ID,
-            'mauticform[vorname]': vorname,
-            'mauticform[nachname1]': nachname,
-            'mauticform[email]': email,
-            'mauticform[anrede]': anrede,
-            'mauticform[firma]': firma,
-            'mauticform[nachricht]': formFields,
-            'mauticform[betreff]': subject,
-
-        };
-
-        return fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-                'X-Requested-With': 'XMLHttpRequest',
-            },
-            body: serializeData(data)
-        }).then(response => {
-            if (response.ok) {
-                console.log('Form submitted successfully');
-
-            } else {
-                console.error('Form submission failed');
+        updateDevice() {
+            try {
+                this.selectedDevice = this.$refs.deviceSelect.value;
+                this.currentUpgrades = this.deviceUpgrades[this.selectedDevice] || [];
+            } catch (error) {
+                console.error('Error updating device:', error);
+                this.currentUpgrades = [];
             }
-        }).catch(error => {
-            console.error('Error submitting form', error);
-        });
-    } */
+        },
 
+        nextStep() {
+            if (this.validateCurrentStep()) {
+                this.currentStep = Math.min(this.currentStep + 1, 3);
+                window.scrollTo(0, 0);
+            }
+        },
 
-    function sendForm() {
+        previousStep() {
+            this.currentStep = Math.max(this.currentStep - 1, 1);
+            window.scrollTo(0, 0);
+        },
+
+        validateCurrentStep() {
+            try {
+                const form = document.getElementById('contact');
+                const currentFields = form.querySelectorAll(`[data-step="${this.currentStep}"] [required]`);
+                let valid = true;
+
+                currentFields.forEach(field => {
+                    if (!field.value) {
+                        field.classList.add('border-red-500');
+                        valid = false;
+                    } else {
+                        field.classList.remove('border-red-500');
+                    }
+                });
+
+                return valid;
+            } catch (error) {
+                console.error('Error validating step:', error);
+                return false;
+            }
+        }
+    }))
+})
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'AW-16451083839');
+
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16458586897/Inh5COOX7MEZEJG2iKg9',
+      'event_callback': callback
+  });
+  return false;
+}
+
+function serializeData(obj) {
+    if ('string' == typeof obj) {
+        return obj;
+    }
+    return Object.keys(obj).map(function (key) {
+        return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+    }).join('&');
+}
+
+function sendForm() {
     const form = document.getElementById('contact');
     const formData = new FormData(form);
     const data = JSON.stringify(Object.fromEntries(formData));
@@ -634,6 +788,7 @@
     .then(data => {
         if (data.success) {
             alert('Formular erfolgreich gesendet!');
+            form.reset();
         } else {
             alert('Fehler beim Senden.');
         }

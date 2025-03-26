@@ -114,223 +114,287 @@
 
 
 
-  
-<nav class="bg-black">
-  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-4 text-gray-200">
-    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0">
-      <span class="text-md md:text-lg hover:text-white block md:inline"><i class="fas fa-phone-alt"></i> +49 (0) 69 271 470 985</span>
+  <nav class="bg-black sticky top-0 z-50 border-b border-gray-800">
+  <!-- Top bar with contact info -->
+  <div class="flex flex-wrap justify-end md:justify-end items-center w-full p-3 text-gray-300 bg-gray-900/50 backdrop-blur-sm">
+    <div class="w-full md:w-auto text-center md:text-right mb-2 md:px-4 md:mb-0">
+      <a href="tel:+4969271470985" class="text-md md:text-lg hover:text-blue-400 transition-colors duration-200 block md:inline">
+        <i class="fas fa-phone-alt mr-2"></i>+49 (0) 69 271 470 985
+      </a>
     </div>
-    <div class="w-full md:w-auto text-center md:text-right mb-4 md:px-4 md:mb-0 md:ml-4">
-      <span class="text-md md:text-lg hover:text-white block md:inline"><i class="fas fa-envelope"></i> kontakt@totalrugged.com</span>
+    <div class="w-full md:w-auto text-center md:text-right mb-2 md:px-4 md:mb-0 md:ml-4">
+      <a href="mailto:kontakt@totalrugged.com" class="text-md md:text-lg hover:text-blue-400 transition-colors duration-200 block md:inline">
+        <i class="fas fa-envelope mr-2"></i>kontakt@totalrugged.com
+      </a>
     </div>
     <div class="w-full md:w-auto text-center md:px-4 md:text-right">
-      <a href="/kontakt/" class="block text-center px-8 py-2 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">Kontakt</a>
+      <a href="/kontakt/" class="inline-block px-6 py-2 text-white font-bold bg-blue-600 hover:bg-blue-700 rounded-full transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+        Kontakt
+      </a>
     </div>
   </div>
 
-  <!-- Logo -->
-  <div class="flex justify-between items-center w-full p-4 py-8 text-white">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-8 px-16" alt="Flowbite Logo" loading="lazy">
-    </a>
-  </div>
+  <div class="max-w-screen-xl mx-auto px-4">
+    <!-- Logo and Navigation Container -->
+    <div class="flex flex-wrap items-center justify-between py-4">
+      <!-- Logo section -->
+      <a href="/" class="flex items-center transform hover:scale-105 transition-transform duration-200">
+        <img src="/assets/images/logo/Logowhite_totalrugged.svg" class="h-10" alt="TotalRugged Logo" loading="lazy">
+      </a>
 
-
-
-
-    <!-- display items -->
-     <div class="p-4 md:hidden  justify-between items-center">
-<button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-left p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden" aria-controls="mega-menu-full" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
-            </svg>
-      </button>
-    </div>
-    <!-- items -->
-      <div id="mega-menu-full" class="items-center justify-start pl-4 font-medium hidden w-full md:flex md:w-auto md:order-1">
-        <ul class="md:flex xs:flex-col md:flex-row  xs:p-4 md:p-0 mt-4 rounded-lg bg-black md:bg-transparent md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-              <li>
-                <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Tablets<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg></button>
-              </li>
-              <li>
-                  <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent mb-4 md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Laptops<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg></button>
-              </li>
-              <li>
-                <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 mb-4 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Branchen<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-                  </svg></button>
-              </li>
-              <li>
-                <a href="/ueber_uns/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Über uns</a>
-            </li>
-
-
-          </ul>
-
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+          <span class="sr-only">Menü öffnen</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+          </svg>
+        </button>
       </div>
-  
 
-
-<!-- dropdown 1 -->
-<div id="mega-menu-full-dropdown1" class="hidden mt-1 shadow-sm bg-gray-600">
-  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
-    <ul class="flex flex-wrap justify-between">
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-r8/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Image Durabook R8" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook R8</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-r11/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_R11/A-01.webp" alt="Image Durabook R11" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook R11</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-r11l/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_R11L/A-01.webp" alt="Image Durabook R11L" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook R11L</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/4">
-        <a href="/produkte/durabook-u11i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-500 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Image Durabook U11I" loading="lazy">
-          <div class="font-semibold text-white text-center mt-2">Durabook U11I</div>
-        </a>
-      </li>
-    </ul>
+      <!-- Navigation items -->
+      <div id="mega-menu-full" class="hidden w-full md:block md:w-auto">
+        <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+          <li>
+            <button id="mega-menu-full-dropdown-button1" data-collapse-toggle="mega-menu-full-dropdown1" class="flex items-center w-full py-2 px-3 text-gray-200 rounded md:w-auto hover:text-blue-400 md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">
+              Tablets
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button id="mega-menu-full-dropdown-button2" data-collapse-toggle="mega-menu-full-dropdown2" class="flex items-center w-full py-2 px-3 text-gray-200 rounded md:w-auto hover:text-blue-400 md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">
+              Laptops
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button id="mega-menu-full-dropdown-button3" data-collapse-toggle="mega-menu-full-dropdown3" class="flex items-center w-full py-2 px-3 text-gray-200 rounded md:w-auto hover:text-blue-400 md:hover:bg-transparent md:border-0 md:p-0 transition-colors duration-200">
+              Branchen
+              <svg class="w-2.5 h-2.5 ms-2.5 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a href="/ueber_uns/" class="block py-2 px-3 text-gray-200 rounded hover:text-blue-400 md:p-0 transition-colors duration-200">Über uns</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
 
-
-
-   <!-- dropdown 2 -->
-   <div id="mega-menu-full-dropdown2" class="hidden mt-1 shadow-sm bg-gray-600">
+  <!-- dropdown 1 -->
+  <div id="mega-menu-full-dropdown1" class="hidden mt-1 border-t border-gray-700 bg-gray-900/95 backdrop-blur-sm shadow-xl transition-all duration-300">
     <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
       <ul class="flex flex-wrap justify-between">
-        <li class="w-1/2 lg:w-1/3">
-          <a href="/produkte/durabook-s15/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img class="w-40 mx-auto" src="/assets/images/L_S15/front.webp" alt="Image Durabook S15" loading="lazy">
-            <div class="font-semibold text-white text-center mt-2">Durabook S15</div>
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-r8/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_R8/FRONT-W11-01.webp" alt="Durabook R8 - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook R8</div>
           </a>
         </li>
-        <li class="w-1/2 lg:w-1/3">
-          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img class="w-40 mx-auto" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Image Durabook S14I" loading="lazy">
-            <div class="font-semibold text-white text-center mt-2">Durabook S14I</div>
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-r11/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_R11/A-01.webp" alt="Durabook R11 - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook R11</div>
           </a>
         </li>
-        <li class="w-1/2 lg:w-1/3">
-          <a href="/produkte/durabook-z14i/" class="block p-3 rounded-lg items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img class="w-40 mx-auto" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Image Durabook Z14I" loading="lazy">
-            <div class="font-semibold text-white text-center mt-2">Durabook Z14I</div>
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-r11l/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_R11L/A-01.webp" alt="Durabook R11L - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook R11L</div>
           </a>
         </li>
-        <!-- Falls weitere Elemente hinzufügt werden sollen -->
+        <li class="w-1/2 lg:w-1/4">
+          <a href="/produkte/durabook-u11i/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/T_U11l/U11I-windows-11.webp" alt="Durabook U11I - Robustes Tablet" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook U11I</div>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 
-
-<!-- dropdown 3 -->
-<div id="mega-menu-full-dropdown3" class="hidden mt-1 shadow-sm bg-gray-600">
-  <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
-    <ul class="flex flex-wrap">
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/werkstatt/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/workshop.webp" alt="Image Werkstatt" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Werkstatt</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/autohaus/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/car_dealer.webp" alt="Image Autohaus" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Autohaus</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/militaer/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/soldiers.webp" alt="Image Militär" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Militär</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/industrie/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/industry.webp" alt="Image Industrie" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Industrie</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/sicherheit/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/police.webp" alt="Image Sicherheit" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Öffentliche Sicherheit</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/transport/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/transport.webp" alt="Image Transport" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Transport</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/logistik/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/logistic.webp" alt="Image Logistik" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Logistik</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/bau/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/construction.webp" alt="Image Bau" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Bau</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/landwirtschaft/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/agrar.webp" alt="Image Landwirtschaft" loading="lazy">
-          <div class="font-semibold text-center text-white mt-6">Landwirtschaft</div>
-        </a>
-      </li>
-      <li class="w-1/2 lg:w-1/5 p-5 box-border">
-        <a href="/branchen/outdoor/" class="block rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-          <img class="w-40 mx-auto" src="/assets/images/branchBanner/outdoor.webp" alt="Image Outdoor" loading="lazy">
-          <div class="font-semibold text-center text-white mt-2">Outdoor</div>
-        </a>
-      </li>
-    </ul>
+  <!-- dropdown 2 -->
+  <div id="mega-menu-full-dropdown2" class="hidden mt-1 border-t border-gray-700 bg-gray-900/95 backdrop-blur-sm shadow-xl transition-all duration-300">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap justify-between">
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s15/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/L_S15/front.webp" alt="Durabook S15 - Robustes Laptop" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook S15</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-s14i/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/Bilder%20Lap%20Navbar/LS_z14i.webp" alt="Durabook S14I - Robustes Laptop" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook S14I</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/3">
+          <a href="/produkte/durabook-z14i/" class="block p-3 rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/L_Z14I/z14i-main-windows11.webp" alt="Durabook Z14I - Robustes Laptop" loading="lazy">
+            </div>
+            <div class="font-semibold text-gray-200 text-center mt-2 text-lg">Durabook Z14I</div>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
-
+  <!-- dropdown 3 -->
+  <div id="mega-menu-full-dropdown3" class="hidden mt-1 border-t border-gray-700 bg-gray-900/95 backdrop-blur-sm shadow-xl transition-all duration-300">
+    <div class="max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white">
+      <ul class="flex flex-wrap">
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/werkstatt/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/workshop.webp" alt="Werkstatt - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Werkstatt</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/autohaus/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/car_dealer.webp" alt="Autohaus - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Autohaus</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/militaer/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/soldiers.webp" alt="Militär - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Militär</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/industrie/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/industry.webp" alt="Industrie - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Industrie</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/sicherheit/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/police.webp" alt="Öffentliche Sicherheit - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Öffentliche Sicherheit</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/transport/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/transport.webp" alt="Transport - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Transport</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/logistik/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/logistic.webp" alt="Logistik - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Logistik</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/bau/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/construction.webp" alt="Bau - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Bau</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/landwirtschaft/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/agrar.webp" alt="Landwirtschaft - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Landwirtschaft</div>
+          </a>
+        </li>
+        <li class="w-1/2 lg:w-1/5 p-4">
+          <a href="/branchen/outdoor/" class="block rounded-xl hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 p-3">
+            <div class="overflow-hidden rounded-lg mb-3">
+              <img class="w-40 mx-auto hover:opacity-90 transition-opacity duration-200" src="/assets/images/branchBanner/outdoor.webp" alt="Outdoor - Robuste Geräte" loading="lazy">
+            </div>
+            <div class="font-semibold text-center text-gray-200 mt-2 text-lg">Outdoor</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </nav>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const buttons = document.querySelectorAll('[data-collapse-toggle]');
-      const dropdowns = document.querySelectorAll('.hidden.mt-1');
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll('[data-collapse-toggle]');
+    const dropdowns = document.querySelectorAll('.hidden.mt-1');
+    let activeDropdown = null;
 
-      buttons.forEach(button => {
-        button.addEventListener('click', function () {
-          const targetDropdownId = this.getAttribute('data-collapse-toggle');
-          const targetDropdown = document.getElementById(targetDropdownId);
+    // Add rotation class to arrow icons when dropdown is active
+    const rotateArrow = (button, show) => {
+      const arrow = button.querySelector('svg');
+      if (show) {
+        arrow.classList.add('rotate-180');
+      } else {
+        arrow.classList.remove('rotate-180');
+      }
+    };
 
-          dropdowns.forEach(dropdown => {
-            if (dropdown !== targetDropdown) {
-              dropdown.classList.add('hidden');
-            }
-          });
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const targetDropdownId = this.getAttribute('data-collapse-toggle');
+        const targetDropdown = document.getElementById(targetDropdownId);
 
-          targetDropdown.classList.toggle('hidden');
-        });
+        // Reset all arrows
+        buttons.forEach(btn => rotateArrow(btn, false));
+
+        if (activeDropdown && activeDropdown !== targetDropdown) {
+          activeDropdown.classList.add('hidden');
+        }
+
+        const isHidden = targetDropdown.classList.contains('hidden');
+        targetDropdown.classList.toggle('hidden');
+        rotateArrow(this, isHidden);
+        
+        activeDropdown = isHidden ? targetDropdown : null;
       });
     });
-  </script>
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('[data-collapse-toggle]') && !event.target.closest('.mt-1')) {
+        dropdowns.forEach(dropdown => dropdown.classList.add('hidden'));
+        buttons.forEach(btn => rotateArrow(btn, false));
+        activeDropdown = null;
+      }
+    });
+  });
+</script>
 
 
   <main>
